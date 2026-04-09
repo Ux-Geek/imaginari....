@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { WordReveal } from "./components/WordReveal";
 import { ProductCard } from "./components/ProductCard";
 import { Cursor } from "./components/Cursor";
+import { Poster } from "./components/Poster";
 
 export default function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -99,6 +100,30 @@ export default function App() {
             </p>
           </motion.div>
         </div>
+      </section>
+
+      {/* POSTER DISPLAY */}
+      <section className="flex min-h-screen flex-col items-center justify-center bg-brand-white py-32 px-8 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="relative"
+        >
+          {/* Subtle Ambient Glow */}
+          <div className="absolute -inset-20 bg-brand-gold/5 blur-[100px] rounded-full" />
+          
+          <Poster />
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 0.4 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="mt-8 text-[8px] tracking-[0.5em] uppercase text-brand-green"
+          >
+            Digital Archive / C-01
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* SECTION 3 — IMAGINARY */}
