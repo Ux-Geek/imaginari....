@@ -17,9 +17,8 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
       whileHover={{ 
         scale: 1.05, 
         y: -15,
-        boxShadow: "0 30px 60px -12px rgba(0, 0, 0, 0.3)"
+        boxShadow: "0 40px 80px -12px rgba(198, 167, 94, 0.25)"
       }}
-      // Fixed Standard Size: 260x325
       className={`relative w-[260px] h-[325px] cursor-none flex-shrink-0 ${className}`}
       style={{ transformOrigin: "bottom center" }}
     >
@@ -61,15 +60,12 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             <feOffset dy="4" />
             <feGaussianBlur stdDeviation="2" />
             <feComposite operator="arithmetic" k2="-1" k3="1" />
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
           </filter>
         </defs>
 
-        {/* 
-            Frame Color: Changed from #1E1E1E to #2A2A2A (more grey) 
-            with a slight golden/warm undertone (#2E2B26)
-        */}
-        <rect width="400" height="500" fill="#2E2B26" mask="url(#dot-mask)" />
+        {/* Frame Color: Now Gold (#C6A75E) as requested */}
+        <rect width="400" height="500" fill="#C6A75E" mask="url(#dot-mask)" />
 
         <g clipPath="url(#inner-frame)">
           <image 
@@ -77,11 +73,11 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             width="400" 
             height="500" 
             preserveAspectRatio="xMidYMid slice"
-            className="opacity-95 grayscale hover:grayscale-0 transition-all duration-1000"
+            className="opacity-95 contrast-125 grayscale hover:grayscale-0 transition-all duration-1000"
           />
-          <rect x="17" y="17" width="366" height="466" fill="rgba(255,255,255,0.02)" />
+          <rect x="17" y="17" width="366" height="466" fill="rgba(198, 167, 94, 0.05)" />
           <g filter="url(#inner-shadow)">
-            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
           </g>
         </g>
       </svg>
