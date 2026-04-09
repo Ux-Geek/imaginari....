@@ -51,8 +51,8 @@ export default function App() {
       </nav>
 
       {/* SECTION 1 — ENTRY */}
-      <section className="flex min-h-screen flex-col items-center justify-center px-8 text-center">
-        <div className="max-w-2xl space-y-12">
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
+        <div className="max-w-2xl space-y-12 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Entry</p>
           <div className="space-y-4">
             <WordReveal 
@@ -73,11 +73,23 @@ export default function App() {
             <p className="text-lg italic text-brand-green/60">something in you never left</p>
           </motion.div>
         </div>
+
+        {/* Poster Cards */}
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
+          rotation={-4}
+          className="absolute -bottom-20 -left-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+        />
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+          rotation={12}
+          className="absolute -bottom-20 -right-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+        />
       </section>
 
       {/* SECTION 2 — IDENTITY */}
-      <section className="inverse-mode flex min-h-screen flex-col items-center justify-center px-8 text-center">
-        <div className="max-w-3xl space-y-16">
+      <section className="relative inverse-mode flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
+        <div className="max-w-3xl space-y-16 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
           <div className="space-y-8">
             <WordReveal 
@@ -100,6 +112,18 @@ export default function App() {
             </p>
           </motion.div>
         </div>
+
+        {/* Poster Cards */}
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
+          rotation={-4}
+          className="absolute -bottom-20 -left-20 scale-75 opacity-30 hover:opacity-80 transition-opacity"
+        />
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
+          rotation={12}
+          className="absolute -bottom-20 -right-20 scale-75 opacity-30 hover:opacity-80 transition-opacity"
+        />
       </section>
 
       {/* POSTER DISPLAY */}
@@ -126,9 +150,9 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* SECTION 3 — IMAGINARY */}
-      <section className="flex min-h-screen flex-col items-center justify-center px-8 text-center">
-        <div className="max-w-2xl space-y-12">
+      {/* SECTION 3 — IMAGINARY (Concept) */}
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
+        <div className="max-w-2xl space-y-12 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
           <div className="space-y-4">
             <WordReveal 
@@ -147,6 +171,18 @@ export default function App() {
             </p>
           </motion.div>
         </div>
+
+        {/* Poster Cards */}
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
+          rotation={-4}
+          className="absolute -bottom-20 -left-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+        />
+        <Poster 
+          cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
+          rotation={12}
+          className="absolute -bottom-20 -right-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+        />
       </section>
 
       {/* TRANSITION TO CATALOGUE */}
