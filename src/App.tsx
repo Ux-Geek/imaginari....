@@ -74,16 +74,16 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* Poster Cards */}
+        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
         <Poster 
           cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
           rotation={-4}
-          className="absolute -bottom-20 -left-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+          className="absolute bottom-[8px] left-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
         />
         <Poster 
           cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
           rotation={12}
-          className="absolute -bottom-20 -right-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+          className="absolute bottom-[8px] right-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
         />
       </section>
 
@@ -113,16 +113,16 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* Poster Cards */}
+        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
         <Poster 
           cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
           rotation={-4}
-          className="absolute -bottom-20 -left-20 scale-75 opacity-30 hover:opacity-80 transition-opacity"
+          className="absolute bottom-[8px] left-[8px] scale-75 opacity-30 hover:opacity-80 transition-opacity"
         />
         <Poster 
           cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
           rotation={12}
-          className="absolute -bottom-20 -right-20 scale-75 opacity-30 hover:opacity-80 transition-opacity"
+          className="absolute bottom-[8px] right-[8px] scale-75 opacity-30 hover:opacity-80 transition-opacity"
         />
       </section>
 
@@ -172,16 +172,16 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* Poster Cards */}
+        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
         <Poster 
           cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
           rotation={-4}
-          className="absolute -bottom-20 -left-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+          className="absolute bottom-[8px] left-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
         />
         <Poster 
           cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
           rotation={12}
-          className="absolute -bottom-20 -right-20 scale-75 opacity-40 hover:opacity-100 transition-opacity"
+          className="absolute bottom-[8px] right-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
         />
       </section>
 
