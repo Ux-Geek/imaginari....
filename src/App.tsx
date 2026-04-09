@@ -52,7 +52,7 @@ export default function App() {
 
       {/* SECTION 1 — ENTRY */}
       <section className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
-        <div className="max-w-2xl space-y-12 z-10">
+        <div className="relative max-w-2xl space-y-12 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Entry</p>
           <div className="space-y-4">
             <WordReveal 
@@ -72,24 +72,26 @@ export default function App() {
           >
             <p className="text-lg italic text-brand-green/60">something in you never left</p>
           </motion.div>
-        </div>
 
-        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
-          rotation={-4}
-          className="absolute bottom-[8px] left-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
-        />
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
-          rotation={12}
-          className="absolute bottom-[8px] right-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
-        />
+          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
+              rotation={-4}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity -translate-x-1/2"
+            />
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+              rotation={12}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity translate-x-1/2"
+            />
+          </div>
+        </div>
       </section>
 
       {/* SECTION 2 — IDENTITY */}
       <section className="relative inverse-mode flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
-        <div className="max-w-3xl space-y-16 z-10">
+        <div className="relative max-w-3xl space-y-16 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
           <div className="space-y-8">
             <WordReveal 
@@ -111,48 +113,26 @@ export default function App() {
               there is a place that exists in you without asking permission
             </p>
           </motion.div>
+
+          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
+              rotation={-4}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-30 hover:opacity-80 transition-opacity -translate-x-1/2"
+            />
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
+              rotation={12}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-30 hover:opacity-80 transition-opacity translate-x-1/2"
+            />
+          </div>
         </div>
-
-        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
-          rotation={-4}
-          className="absolute bottom-[8px] left-[8px] scale-75 opacity-30 hover:opacity-80 transition-opacity"
-        />
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
-          rotation={12}
-          className="absolute bottom-[8px] right-[8px] scale-75 opacity-30 hover:opacity-80 transition-opacity"
-        />
-      </section>
-
-      {/* POSTER DISPLAY */}
-      <section className="flex min-h-screen flex-col items-center justify-center bg-brand-white py-32 px-8 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative"
-        >
-          {/* Subtle Ambient Glow */}
-          <div className="absolute -inset-20 bg-brand-gold/5 blur-[100px] rounded-full" />
-          
-          <Poster />
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.4 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="mt-8 text-[8px] tracking-[0.5em] uppercase text-brand-green"
-          >
-            Digital Archive / C-01
-          </motion.p>
-        </motion.div>
       </section>
 
       {/* SECTION 3 — IMAGINARY (Concept) */}
       <section className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center overflow-hidden">
-        <div className="max-w-2xl space-y-12 z-10">
+        <div className="relative max-w-2xl space-y-12 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
           <div className="space-y-4">
             <WordReveal 
@@ -170,19 +150,21 @@ export default function App() {
               it is how you return without moving
             </p>
           </motion.div>
-        </div>
 
-        {/* Poster Cards — Aligned perfectly at base with 8px edge offset */}
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
-          rotation={-4}
-          className="absolute bottom-[8px] left-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
-        />
-        <Poster 
-          cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
-          rotation={12}
-          className="absolute bottom-[8px] right-[8px] scale-75 opacity-40 hover:opacity-100 transition-opacity"
-        />
+          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
+              rotation={-4}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity -translate-x-1/2"
+            />
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
+              rotation={12}
+              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity translate-x-1/2"
+            />
+          </div>
+        </div>
       </section>
 
       {/* TRANSITION TO CATALOGUE */}

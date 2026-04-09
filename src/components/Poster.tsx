@@ -16,9 +16,9 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
       whileHover={{ 
         scale: 1.05, 
         y: -10,
-        boxShadow: "0 20px 40px rgba(0,0,0,0.08)"
+        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
       }}
-      className={`relative w-[300px] h-[375px] cursor-none ${className}`}
+      className={`w-[260px] h-[325px] cursor-none ${className}`}
       style={{ transformOrigin: "bottom center" }}
     >
       <svg 
@@ -27,29 +27,25 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
         viewBox="0 0 400 500" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full"
+        className="w-full h-full filter drop-shadow-xl"
       >
         <defs>
           <clipPath id="inner-frame">
             <rect x="17" y="17" width="366" height="466" rx="1" />
           </clipPath>
           
-          {/* Mask for the dots - we want the circles to be "holes" */}
           <mask id="dot-mask">
             <rect width="400" height="500" fill="white" />
-            {/* Top row holes */}
+            {/* Edge dots as holes */}
             {Array.from({ length: 27 }).map((_, i) => (
               <circle key={`mt-${i}`} cx={5 + i * 15} cy={0} r="7" fill="black" />
             ))}
-            {/* Bottom row holes */}
             {Array.from({ length: 27 }).map((_, i) => (
               <circle key={`mb-${i}`} cx={5 + i * 15} cy={500} r="7" fill="black" />
             ))}
-            {/* Left holes */}
             {Array.from({ length: 32 }).map((_, i) => (
               <circle key={`ml-${i}`} cx={0} cy={17 + i * 15} r="6" fill="black" />
             ))}
-            {/* Right holes */}
             {Array.from({ length: 32 }).map((_, i) => (
               <circle key={`mr-${i}`} cx={400} cy={17 + i * 15} r="6" fill="black" />
             ))}
@@ -63,29 +59,23 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             <feOffset dy="4" />
             <feGaussianBlur stdDeviation="2" />
             <feComposite operator="arithmetic" k2="-1" k3="1" />
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
           </filter>
         </defs>
 
-        {/* The Frame with Holes - consistently #1E1E1E */}
         <rect width="400" height="500" fill="#1E1E1E" mask="url(#dot-mask)" />
 
-        {/* Inner Content Component */}
         <g clipPath="url(#inner-frame)">
-          {/* City Image Background */}
           <image 
             href={cityImage} 
             width="400" 
             height="500" 
             preserveAspectRatio="xMidYMid slice"
-            className="opacity-90 grayscale hover:grayscale-0 transition-all duration-700"
+            className="opacity-90 grayscale hover:grayscale-0 transition-all duration-1000"
           />
-          
-          {/* Subtle Overlay to make it feel like a card */}
-          <rect x="17" y="17" width="366" height="466" fill="rgba(255,255,255,0.05)" />
-          
+          <rect x="17" y="17" width="366" height="466" fill="rgba(255,255,255,0.03)" />
           <g filter="url(#inner-shadow)">
-            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" />
           </g>
         </g>
       </svg>
