@@ -73,17 +73,17 @@ export default function App() {
             <p className="text-lg italic text-brand-green/60">something in you never left</p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          {/* Integrated Poster Cards — Fully Visible and Standardized */}
           <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
             <Poster 
               cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
               rotation={-4}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity -translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity -translate-x-1/2"
             />
             <Poster 
               cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
               rotation={12}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity translate-x-1/2"
             />
           </div>
         </div>
@@ -114,17 +114,17 @@ export default function App() {
             </p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          {/* Integrated Poster Cards — Fully Visible and Standardized */}
           <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
             <Poster 
               cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
               rotation={-4}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-30 hover:opacity-80 transition-opacity -translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity -translate-x-1/2"
             />
             <Poster 
               cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
               rotation={12}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-30 hover:opacity-80 transition-opacity translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity translate-x-1/2"
             />
           </div>
         </div>
@@ -144,38 +144,31 @@ export default function App() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
-            className="pt-8"
+            className="pt-8 space-y-12"
           >
             <p className="text-xl text-brand-green/80">
               it is how you return without moving
             </p>
+            
+            <p className="text-sm tracking-[0.2em] uppercase text-brand-gold">
+              and sometimes… you wear it
+            </p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Balanced and closer to text base */}
+          {/* Integrated Poster Cards — Fully Visible and Standardized */}
           <div className="absolute -bottom-16 left-0 w-full flex justify-between px-0 pointer-events-none translate-y-full">
             <Poster 
               cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
               rotation={-4}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity -translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity -translate-x-1/2"
             />
             <Poster 
               cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
               rotation={12}
-              className="pointer-events-auto scale-75 md:scale-90 opacity-40 hover:opacity-100 transition-opacity translate-x-1/2"
+              className="pointer-events-auto opacity-100 transition-opacity translate-x-1/2"
             />
           </div>
         </div>
-      </section>
-
-      {/* TRANSITION TO CATALOGUE */}
-      <section className="flex h-[50vh] items-center justify-center bg-brand-white/30">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="text-sm tracking-[0.2em] uppercase text-brand-gold"
-        >
-          and sometimes… you wear it
-        </motion.p>
       </section>
 
       {/* CATALOGUE */}

@@ -12,13 +12,15 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
     <motion.div
       initial={{ opacity: 0, y: 40, rotate: rotation - 5 }}
       whileInView={{ opacity: 1, y: 0, rotate: rotation }}
+      viewport={{ once: true }}
       transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ 
         scale: 1.05, 
-        y: -10,
-        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+        y: -15,
+        boxShadow: "0 30px 60px -12px rgba(0, 0, 0, 0.3)"
       }}
-      className={`w-[260px] h-[325px] cursor-none ${className}`}
+      // Fixed Standard Size: 260x325
+      className={`relative w-[260px] h-[325px] cursor-none flex-shrink-0 ${className}`}
       style={{ transformOrigin: "bottom center" }}
     >
       <svg 
@@ -27,7 +29,7 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
         viewBox="0 0 400 500" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full filter drop-shadow-xl"
+        className="w-full h-full filter drop-shadow-2xl"
       >
         <defs>
           <clipPath id="inner-frame">
@@ -59,11 +61,15 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             <feOffset dy="4" />
             <feGaussianBlur stdDeviation="2" />
             <feComposite operator="arithmetic" k2="-1" k3="1" />
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
           </filter>
         </defs>
 
-        <rect width="400" height="500" fill="#1E1E1E" mask="url(#dot-mask)" />
+        {/* 
+            Frame Color: Changed from #1E1E1E to #2A2A2A (more grey) 
+            with a slight golden/warm undertone (#2E2B26)
+        */}
+        <rect width="400" height="500" fill="#2E2B26" mask="url(#dot-mask)" />
 
         <g clipPath="url(#inner-frame)">
           <image 
@@ -71,11 +77,11 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             width="400" 
             height="500" 
             preserveAspectRatio="xMidYMid slice"
-            className="opacity-90 grayscale hover:grayscale-0 transition-all duration-1000"
+            className="opacity-95 grayscale hover:grayscale-0 transition-all duration-1000"
           />
-          <rect x="17" y="17" width="366" height="466" fill="rgba(255,255,255,0.03)" />
+          <rect x="17" y="17" width="366" height="466" fill="rgba(255,255,255,0.02)" />
           <g filter="url(#inner-shadow)">
-            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" />
+            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
           </g>
         </g>
       </svg>
