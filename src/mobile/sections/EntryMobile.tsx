@@ -1,12 +1,35 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { useRef } from "react";
 import { WordReveal } from "../../components/WordReveal";
 import { Poster } from "../../components/Poster";
 
 export const EntryMobile = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 2.5]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
+  const blur = useTransform(scrollYProgress, [0, 0.8], [0, 10]);
+  const filter = useMotionTemplate`blur(${blur}px)`;
+
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden">
-      <div className="relative max-w-sm space-y-10 z-10 w-full">
-        <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">Entry</p>
+    <section ref={containerRef} className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden">
+      <div className="relative max-w-sm space-y-12 z-10 w-full">
+        <div className="flex justify-center">
+          <motion.h1 
+            style={{ 
+              scale, 
+              opacity: opacityText,
+              filter
+            }}
+            className="text-[10vw] font-light tracking-[0.6em] uppercase text-brand-gold whitespace-nowrap will-change-transform"
+          >
+            Imaginari
+          </motion.h1>
+        </div>
         
         <div className="space-y-3">
           <WordReveal 
