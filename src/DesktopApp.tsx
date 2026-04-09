@@ -1,11 +1,11 @@
 import { motion, useScroll } from "motion/react";
 import { useRef } from "react";
-import { Cursor } from "../components/Cursor";
-import { Entry } from "../sections/Entry";
-import { Identity } from "../sections/Identity";
-import { Concept } from "../sections/Concept";
-import { Catalogue } from "../sections/Catalogue";
-import { Footer } from "../sections/Footer";
+import { Cursor } from "./components/Cursor";
+import { Entry } from "./sections/Entry";
+import { Identity } from "./sections/Identity";
+import { Concept } from "./sections/Concept";
+import { Catalogue } from "./sections/Catalogue";
+import { Footer } from "./sections/Footer";
 
 export const DesktopApp = () => {
   const containerRef = useRef<HTMLDivElement>(null);
