@@ -3,11 +3,22 @@ import { motion } from "framer-motion";
 
 interface PosterProps {
   cityImage: string;
+  cityName: string;
+  theme?: "gold" | "black";
   className?: string;
   rotation?: number;
 }
 
-export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation = 0 }) => {
+export const Poster: React.FC<PosterProps> = ({ 
+  cityImage, 
+  cityName, 
+  theme = "gold", 
+  className, 
+  rotation = 0 
+}) => {
+  const frameColor = theme === "gold" ? "#C6A75E" : "#1E1E1E";
+  const shadowColor = theme === "gold" ? "rgba(198, 167, 94, 0.25)" : "rgba(0, 0, 0, 0.4)";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40, rotate: rotation - 5 }}
@@ -17,7 +28,7 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
       whileHover={{ 
         scale: 1.05, 
         y: -15,
-        boxShadow: "0 40px 80px -12px rgba(198, 167, 94, 0.25)"
+        boxShadow: `0 40px 80px -12px ${shadowColor}`
       }}
       className={`relative w-[260px] h-[325px] cursor-none flex-shrink-0 ${className}`}
       style={{ transformOrigin: "bottom center" }}
@@ -64,8 +75,8 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
           </filter>
         </defs>
 
-        {/* Frame Color: Now Gold (#C6A75E) as requested */}
-        <rect width="400" height="500" fill="#C6A75E" mask="url(#dot-mask)" />
+        {/* Frame Color: Dynamic Gold or Black */}
+        <rect width="400" height="500" fill={frameColor} mask="url(#dot-mask)" />
 
         <g clipPath="url(#inner-frame)">
           <image 
@@ -75,9 +86,30 @@ export const Poster: React.FC<PosterProps> = ({ cityImage, className, rotation =
             preserveAspectRatio="xMidYMid slice"
             className="opacity-95 contrast-125 grayscale hover:grayscale-0 transition-all duration-1000"
           />
-          <rect x="17" y="17" width="366" height="466" fill="rgba(198, 167, 94, 0.05)" />
+          
+          {/* Subtle Overlay */}
+          <rect x="17" y="17" width="366" height="466" fill={theme === "gold" ? "rgba(198, 167, 94, 0.05)" : "rgba(0,0,0,0.1)"} />
+          
+          {/* City Name Typography */}
+          <text 
+            x="50%" 
+            y="430" 
+            textAnchor="middle" 
+            fill="#737373" 
+            style={{ 
+              fontFamily: "'Ibarra Real Nova', serif", 
+              fontSize: "44px", 
+              fontWeight: 500,
+              letterSpacing: "0.05em",
+              textTransform: "uppercase"
+            }}
+            className="drop-shadow-sm select-none"
+          >
+            {cityName}
+          </text>
+
           <g filter="url(#inner-shadow)">
-            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <rect x="17" y="17" width="366" height="466" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
           </g>
         </g>
       </svg>

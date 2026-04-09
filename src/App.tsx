@@ -73,15 +73,19 @@ export default function App() {
             <p className="text-lg italic text-brand-green/60">something in you never left</p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Fully Visible Gold Frames */}
+          {/* Integrated Poster Cards — Fully Visible Gold/Black Frames */}
           <div className="absolute top-full mt-12 left-0 w-full flex justify-between px-0 pointer-events-none">
             <Poster 
               cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
+              cityName="Lagos"
+              theme="gold"
               rotation={-4}
               className="pointer-events-auto opacity-100 -translate-x-1/2"
             />
             <Poster 
-              cityImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+              cityImage="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800" 
+              cityName="London"
+              theme="black"
               rotation={12}
               className="pointer-events-auto opacity-100 translate-x-1/2"
             />
@@ -114,15 +118,19 @@ export default function App() {
             </p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Fully Visible Gold Frames */}
+          {/* Integrated Poster Cards — Fully Visible Gold/Black Frames */}
           <div className="absolute top-full mt-12 left-0 w-full flex justify-between px-0 pointer-events-none">
             <Poster 
-              cityImage="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800" 
+              cityImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800" 
+              cityName="Tokyo"
+              theme="black"
               rotation={-4}
               className="pointer-events-auto opacity-100 -translate-x-1/2"
             />
             <Poster 
-              cityImage="https://images.unsplash.com/photo-1512453979798-5ea266f8870a?q=80&w=800" 
+              cityImage="https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=800" 
+              cityName="Abuja"
+              theme="gold"
               rotation={12}
               className="pointer-events-auto opacity-100 translate-x-1/2"
             />
@@ -155,15 +163,19 @@ export default function App() {
             </p>
           </motion.div>
 
-          {/* Integrated Poster Cards — Fully Visible Gold Frames */}
+          {/* Integrated Poster Cards — Fully Visible Gold/Black Frames */}
           <div className="absolute top-full mt-12 left-0 w-full flex justify-between px-0 pointer-events-none">
             <Poster 
-              cityImage="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=800" 
+              cityImage="https://images.unsplash.com/photo-1539410849639-9ea07149666c?q=80&w=800" 
+              cityName="Marrakesh"
+              theme="gold"
               rotation={-4}
               className="pointer-events-auto opacity-100 -translate-x-1/2"
             />
             <Poster 
-              cityImage="https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=800" 
+              cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800" 
+              cityName="Accra"
+              theme="black"
               rotation={12}
               className="pointer-events-auto opacity-100 translate-x-1/2"
             />
