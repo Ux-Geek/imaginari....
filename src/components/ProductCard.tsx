@@ -53,7 +53,7 @@ export function ProductCard({ name, image, price, category }: ProductCardProps) 
           transform: "translateZ(50px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-0 flex flex-col justify-end p-8"
+        className="absolute inset-0 flex flex-col justify-end p-4 md:p-8"
       >
         <motion.img
           src={image}
@@ -64,12 +64,12 @@ export function ProductCard({ name, image, price, category }: ProductCardProps) 
         
         <div className="relative z-10 space-y-1">
           {category && (
-            <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-brand-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100">
               {category}
             </p>
           )}
-          <h3 className="text-lg font-medium text-brand-green">{name}</h3>
-          {price && <p className="text-sm text-brand-green/60">{price}</p>}
+          <h3 className="text-base md:text-lg font-medium text-brand-green">{name}</h3>
+          {price && <p className="text-xs md:text-sm text-brand-green/60">{price}</p>}
         </div>
       </div>
       

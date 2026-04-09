@@ -45,7 +45,7 @@ export const CatalogueMobile = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-12">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10">
           {products.map((product, i) => (
             <motion.div
               key={product.name}
