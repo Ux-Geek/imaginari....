@@ -9,7 +9,7 @@ export const SideNav = () => {
   ];
 
   return (
-    <nav className="fixed top-6 right-6 z-[100] h-[50px] w-auto max-w-[500px] flex items-center gap-8 px-6 md:px-10 bg-white border border-black/5 shadow-sm rounded-md transition-all">
+    <nav className="fixed top-6 right-6 md:right-auto md:left-1/2 md:-translate-x-1/2 z-[100] h-[50px] w-auto max-w-[600px] flex items-center gap-8 px-6 md:px-10 bg-white border border-black/5 shadow-sm rounded-md transition-all">
       {/* Brand/Logo - Hidden on mobile, visible on desktop */}
       <div className="hidden md:block text-[10px] tracking-[0.3em] uppercase text-black font-bold">
         Imaginari
