@@ -1,20 +1,31 @@
 import { motion } from "framer-motion";
 
 export const SideNav = () => {
+  const navItems = [
+    { label: "Story", href: "#story" },
+    { label: "Catalogue", href: "#catalogue" },
+    { label: "Archive", href: "#archive" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="fixed top-0 right-0 z-[100] h-[70px] w-[200px] flex items-center justify-between px-6 bg-white border-b border-l border-black/5 shadow-lg rounded-bl-3xl">
-      <div className="flex flex-col">
-        <span className="text-[10px] tracking-[0.2em] uppercase text-black font-bold">Imaginari</span>
-        <span className="text-[8px] tracking-[0.1em] uppercase text-black/40">Menu</span>
+    <nav className="fixed top-6 right-6 z-[100] h-[50px] w-full max-w-[420px] flex items-center justify-between px-8 bg-white border border-black/5 shadow-2xl rounded-full">
+      <div className="text-[10px] tracking-[0.3em] uppercase text-black font-bold">
+        Imaginari
       </div>
-      
-      <div className="flex items-center gap-4">
-        <div className="h-8 w-[1px] bg-black/10" />
-        <button className="flex flex-col gap-1 items-end group">
-          <div className="h-[1.5px] w-5 bg-black" />
-          <div className="h-[1.5px] w-3 bg-black transition-all group-hover:w-5" />
-        </button>
-      </div>
+
+      <ul className="flex items-center gap-6">
+        {navItems.map((item) => (
+          <li key={item.label}>
+            <a
+              href={item.href}
+              className="text-[9px] tracking-[0.2em] uppercase text-black/50 hover:text-black transition-colors duration-300"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
