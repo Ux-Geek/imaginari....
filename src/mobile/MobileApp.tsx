@@ -6,15 +6,15 @@ import { ConceptMobile } from "./sections/ConceptMobile";
 import { CatalogueMobile } from "./sections/CatalogueMobile";
 import { FooterMobile } from "./sections/FooterMobile";
 
-import { MobileNav } from "./components/MobileNav";
+import { SideNav } from "../components/SideNav";
 
 export const MobileApp = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
 
   return (
-    <main ref={containerRef} className="relative min-h-screen bg-brand-white">
-      <MobileNav />
+    <main ref={containerRef} className="relative min-h-screen bg-brand-white pr-16 md:pr-20">
+      <SideNav />
 
       {/* Mobile Sections */}
       <div className="snap-y snap-proximity overflow-y-auto">
