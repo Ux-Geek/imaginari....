@@ -17,7 +17,7 @@ export const DesktopApp = () => {
       
       {/* Navigation */}
       <nav className="fixed top-0 z-50 flex w-full items-center justify-between px-8 py-6 mix-blend-difference">
-        <div className="text-xs tracking-[0.3em] uppercase text-brand-white">Imaginary</div>
+        <div className="text-xs tracking-[0.3em] uppercase text-brand-white">Imaginari</div>
         <div className="flex gap-8 text-[10px] tracking-[0.2em] uppercase text-brand-white">
           <a href="#" className="hover:text-brand-gold transition-colors">Story</a>
           <a href="#" className="hover:text-brand-gold transition-colors">Catalogue</a>

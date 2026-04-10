@@ -4,7 +4,7 @@ export const Footer = () => {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
           <div className="space-y-8">
-            <div className="text-xl tracking-[0.4em] uppercase">Imaginary</div>
+            <div className="text-xl tracking-[0.4em] uppercase">Imaginari</div>
             <p className="max-w-xs text-sm leading-relaxed text-brand-white/60">
               A quiet return. Not memory, not nostalgia, but a quiet return.
             </p>
@@ -27,7 +27,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-24 border-t border-brand-white/10 pt-8 text-[10px] tracking-[0.1em] uppercase text-brand-white/40">
-          © 2026 Imaginary. All rights reserved.
+          © 2026 Imaginari. All rights reserved.
         </div>
       </div>
     </footer>
