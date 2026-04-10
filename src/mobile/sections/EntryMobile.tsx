@@ -28,21 +28,21 @@ export const EntryMobile = () => {
           <p className="text-base italic text-brand-green/60">something in you never left</p>
         </motion.div>
 
-        {/* Poster Cards - Explicitly positioned for Mobile */}
-        <div className="relative h-64 w-full mt-16">
+        {/* Poster Cards - Smaller and centered for Mobile */}
+        <div className="relative flex justify-center gap-4 mt-8 w-full px-4 overflow-visible">
           <Poster 
             cityImage="https://images.unsplash.com/photo-1594132036733-4001d90f5c12?q=80&w=800" 
             cityName="Lagos"
             theme="gold"
-            rotation={-12}
-            className="absolute left-0 top-0 scale-90 -translate-x-4"
+            rotation={-8}
+            className="scale-[0.7] -mr-8"
           />
           <Poster 
             cityImage="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800" 
             cityName="London"
             theme="black"
-            rotation={15}
-            className="absolute right-0 top-4 scale-90 translate-x-4 shadow-2xl"
+            rotation={10}
+            className="scale-[0.7] -ml-8 shadow-xl"
           />
         </div>
       </div>

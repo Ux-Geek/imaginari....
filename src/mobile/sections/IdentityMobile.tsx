@@ -28,21 +28,21 @@ export const IdentityMobile = () => {
           </p>
         </motion.div>
 
-        {/* Poster Cards - Stacked or Overlapping for Mobile */}
-        <div className="relative h-64 w-full mt-12">
+        {/* Poster Cards - Smaller and centered for Mobile */}
+        <div className="relative flex justify-center gap-4 mt-8 w-full px-4 overflow-visible">
           <Poster 
             cityImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800" 
             cityName="Tokyo"
             theme="black"
-            rotation={-8}
-            className="absolute left-0 top-0 scale-90 -translate-x-2"
+            rotation={-6}
+            className="scale-[0.7] -mr-8"
           />
           <Poster 
             cityImage="https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=800" 
             cityName="Abuja"
             theme="gold"
-            rotation={20}
-            className="absolute right-0 top-8 scale-95 translate-x-2"
+            rotation={12}
+            className="scale-[0.7] -ml-8"
           />
         </div>
       </div>
