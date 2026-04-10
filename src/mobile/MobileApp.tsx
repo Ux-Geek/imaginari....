@@ -13,7 +13,7 @@ export const MobileApp = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <main ref={containerRef} className="relative min-h-screen bg-brand-white pr-16 md:pr-20">
+    <main ref={containerRef} className="relative min-h-screen bg-brand-white">
       <SideNav />
 
       {/* Mobile Sections */}
