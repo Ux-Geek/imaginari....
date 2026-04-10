@@ -9,7 +9,7 @@ export const SideNav = () => {
   ];
 
   return (
-    <nav className="fixed top-6 right-6 z-[100] h-[50px] w-full max-w-[420px] flex items-center justify-between px-8 bg-white border border-black/5 shadow-2xl rounded-full">
+    <nav className="fixed top-6 right-6 z-[100] h-[50px] w-full max-w-[500px] flex items-center justify-between px-10 bg-white border border-black/5 shadow-sm rounded-md">
       <div className="text-[10px] tracking-[0.3em] uppercase text-black font-bold">
         Imaginari
       </div>
