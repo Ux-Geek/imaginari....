@@ -13,7 +13,7 @@ export const DesktopApp = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <main ref={containerRef} className="relative min-h-screen pr-20">
+    <main ref={containerRef} className="relative min-h-screen">
       <Cursor />
       <SideNav />
 

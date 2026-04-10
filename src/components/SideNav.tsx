@@ -1,41 +1,19 @@
 import { motion } from "framer-motion";
 
 export const SideNav = () => {
-  const navItems = [
-    { label: "Story", href: "#story" },
-    { label: "Catalogue", href: "#catalogue" },
-    { label: "Archive", href: "#archive" },
-    { label: "Contact", href: "#contact" },
-  ];
-
   return (
-    <nav className="fixed right-0 top-0 z-[100] h-screen w-16 md:w-20 flex flex-col items-center justify-between py-12 bg-white border-l border-black/5 shadow-2xl">
-      {/* Brand Logo - Vertical */}
-      <div className="rotate-90 origin-center whitespace-nowrap mt-4">
-        <span className="text-[11px] tracking-[0.5em] uppercase text-black font-semibold">
-          Imaginari
-        </span>
+    <nav className="fixed top-8 right-8 z-[100] h-[70px] w-[200px] flex items-center justify-between px-6 bg-white border border-black/5 shadow-xl rounded-full">
+      <div className="flex flex-col">
+        <span className="text-[10px] tracking-[0.2em] uppercase text-black font-bold">Imaginari</span>
+        <span className="text-[8px] tracking-[0.1em] uppercase text-black/40">Menu</span>
       </div>
-
-      {/* Nav Links */}
-      <div className="flex flex-col gap-12 py-12">
-        {navItems.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className="rotate-90 origin-center whitespace-nowrap text-[9px] tracking-[0.3em] uppercase text-black/40 hover:text-brand-gold transition-colors duration-300"
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
-
-      {/* Cart/Bottom Action */}
-      <div className="flex flex-col items-center gap-12">
-        <button className="rotate-90 origin-center whitespace-nowrap text-[9px] tracking-[0.3em] uppercase text-black font-semibold">
-          Cart (0)
+      
+      <div className="flex items-center gap-4">
+        <div className="h-8 w-[1px] bg-black/10" />
+        <button className="flex flex-col gap-1 items-end group">
+          <div className="h-[1.5px] w-5 bg-black" />
+          <div className="h-[1.5px] w-3 bg-black transition-all group-hover:w-5" />
         </button>
-        <div className="h-20 w-[1px] bg-black/10" />
       </div>
     </nav>
   );
