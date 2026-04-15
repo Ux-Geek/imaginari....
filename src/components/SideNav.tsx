@@ -41,7 +41,7 @@ export const SideNav = () => {
             href="#"
             aria-label="Imaginari home"
             className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${
-              scrolled ? "text-brand-green" : "text-white"
+              scrolled ? "text-[#333333]" : "text-white"
             }`}
           >
             Imaginari
@@ -54,7 +54,7 @@ export const SideNav = () => {
           <div
             className={`hidden md:flex items-center gap-2 rounded-full px-4 py-1.5 mr-4 transition-all duration-300 ${
               scrolled
-                ? "bg-black/5 text-brand-green"
+                ? "bg-black/5 text-[#333333]"
                 : "bg-white/10 text-white"
             }`}
           >
@@ -74,7 +74,7 @@ export const SideNav = () => {
             <button
               aria-label="Search"
               className={`flex md:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-brand-green" : "text-white"
+                scrolled ? "text-[#333333]" : "text-white"
               }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ export const SideNav = () => {
             <button
               aria-label="Favourites"
               className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-brand-green" : "text-white"
+                scrolled ? "text-[#333333]" : "text-white"
               }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export const SideNav = () => {
             <button
               aria-label="Profile"
               className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-brand-green" : "text-white"
+                scrolled ? "text-[#333333]" : "text-white"
               }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ export const SideNav = () => {
             <button
               aria-label="Cart"
               className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-brand-green" : "text-white"
+                scrolled ? "text-[#333333]" : "text-white"
               }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
