@@ -26,34 +26,91 @@ const products = [
     price: "£65",
     image: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800",
   },
+  {
+    name: "Meridian Coat",
+    category: "Outerwear",
+    price: "£295",
+    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Abuja Silk Set",
+    category: "Tailoring",
+    price: "£240",
+    image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Passage Hoodie",
+    category: "Knitwear",
+    price: "£130",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Return Cap",
+    category: "Accessories",
+    price: "£55",
+    image: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Drift Linen Shirt",
+    category: "Shirts",
+    price: "£115",
+    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Homeward Blazer",
+    category: "Tailoring",
+    price: "£320",
+    image: "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Kora Knit Vest",
+    category: "Knitwear",
+    price: "£95",
+    image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Roots Canvas Tote",
+    category: "Accessories",
+    price: "£45",
+    image: "https://images.unsplash.com/photo-1544816565-aa8c1166648f?auto=format&fit=crop&q=80&w=800",
+  },
 ];
 
 export const Catalogue = () => {
   return (
-    <section className="bg-white px-8 py-32">
+    <section id="catalogue" className="bg-white px-8 py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-24 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="mb-24 flex flex-col justify-between gap-8 md:flex-row md:items-end"
+        >
           <div className="space-y-4">
             <h2 className="text-3xl font-light tracking-tight">Catalogue 01</h2>
             <p className="max-w-md text-sm text-brand-green/60 leading-relaxed">
-              Pieces designed for the quiet return. Intentional silhouettes, 
+              Pieces designed for the quiet return. Intentional silhouettes,
               cultural anchors, and the weight of home.
             </p>
           </div>
-          <div className="flex gap-4 text-[10px] tracking-[0.2em] uppercase">
+          <div className="flex flex-wrap gap-4 text-[10px] tracking-[0.2em] uppercase">
             <button className="border-b border-brand-green pb-1">All Pieces</button>
             <button className="text-brand-green/40 hover:text-brand-green transition-colors">Knitwear</button>
             <button className="text-brand-green/40 hover:text-brand-green transition-colors">Tailoring</button>
+            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Outerwear</button>
+            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Accessories</button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product, i) => (
             <motion.div
               key={product.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.8 }}
+              viewport={{ once: true }}
+              transition={{ delay: (i % 4) * 0.08, duration: 0.8 }}
             >
               <ProductCard {...product} />
             </motion.div>

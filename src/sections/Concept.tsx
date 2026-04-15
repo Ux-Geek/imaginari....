@@ -4,12 +4,15 @@ import { Poster } from "../components/Poster";
 
 export const Concept = () => {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center">
+    <section
+      id="concept"
+      className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center"
+    >
       <div className="relative max-w-2xl space-y-12 z-10">
         <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
         <div className="space-y-4">
-          <WordReveal 
-            text="imaginary is not a place" 
+          <WordReveal
+            text="imaginary is not a place"
             className="text-4xl md:text-5xl leading-tight justify-center"
           />
         </div>
@@ -22,29 +25,63 @@ export const Concept = () => {
           <p className="text-xl text-brand-green/80">
             it is how you return without moving
           </p>
-          
           <p className="text-sm tracking-[0.2em] uppercase text-brand-gold">
             and sometimes… you wear it
           </p>
         </motion.div>
+      </div>
 
-        {/* Integrated Poster Cards — Optimized for Mobile Diagonals */}
-        <div className="absolute top-full mt-12 left-0 w-full flex justify-between px-0 pointer-events-none">
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1539410849639-9ea07149666c?q=80&w=800" 
+      {/* Poster cards with story copy between them */}
+      <div className="mt-24 w-full max-w-5xl mx-auto flex flex-col items-center">
+        {/* Left poster */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          className="self-start md:-ml-16"
+        >
+          <Poster
+            cityImage="https://images.unsplash.com/photo-1539410849639-9ea07149666c?q=80&w=800"
             cityName="Marrakesh"
             theme="gold"
             rotation={-4}
-            className="pointer-events-auto opacity-100 -translate-x-[70%] md:-translate-x-1/2 md:rotate-[-4deg] rotate-[-20deg] scale-90 md:scale-100"
+            className=""
           />
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800" 
+        </motion.div>
+
+        {/* Story copy between */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="text-center py-14 px-8 max-w-sm mx-auto"
+        >
+          <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
+            worn across continents
+          </p>
+          <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
+            cloth as cartography — every thread a longitude
+          </p>
+        </motion.div>
+
+        {/* Right poster */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          className="self-end md:mr-[-4rem]"
+        >
+          <Poster
+            cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800"
             cityName="Accra"
             theme="black"
-            rotation={12}
-            className="pointer-events-auto opacity-100 translate-x-[70%] md:translate-x-1/2 md:rotate-[12deg] rotate-[18deg] scale-90 md:scale-100"
+            rotation={4}
+            className=""
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

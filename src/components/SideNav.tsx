@@ -6,7 +6,7 @@ export const SideNav = () => {
       label: "Story", 
       href: "#story",
       icon: (
-        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
@@ -15,7 +15,7 @@ export const SideNav = () => {
       label: "Catalogue", 
       href: "#catalogue",
       icon: (
-        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
       )
@@ -24,8 +24,8 @@ export const SideNav = () => {
       label: "Archive", 
       href: "#archive",
       icon: (
-        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
         </svg>
       )
     },
@@ -33,7 +33,7 @@ export const SideNav = () => {
       label: "Contact", 
       href: "#contact",
       icon: (
-        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       )
@@ -41,48 +41,42 @@ export const SideNav = () => {
   ];
 
   return (
-    <nav className="fixed top-6 right-6 md:right-auto md:left-1/2 md:-translate-x-1/2 z-[100] h-[50px] w-auto max-w-[700px] flex items-center gap-8 px-6 md:px-10 bg-white border border-black/5 shadow-sm rounded-md transition-all">
-      {/* Brand/Logo */}
-      <div className="hidden md:block text-[10px] tracking-[0.3em] uppercase text-black font-bold border-r border-black/5 pr-8 mr-2">
-        Imaginari
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] h-[50px] w-auto flex items-center gap-1 px-4 bg-white/80 backdrop-blur-md border border-black/5 shadow-sm rounded-full transition-all">
+      {/* Logo mark */}
+      <div className="flex items-center justify-center w-8 h-8 mr-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A75E" strokeWidth="1.5">
+          <circle cx="12" cy="12" r="9" />
+          <path strokeLinecap="round" d="M12 7v5l3 3" />
+        </svg>
       </div>
 
-      {/* Main Nav Items */}
-      <ul className="hidden md:flex items-center gap-8">
+      <div className="w-px h-5 bg-black/10 mx-1" />
+
+      {/* Icon-only nav items */}
+      <ul className="flex items-center gap-1">
         {navItems.map((item) => (
           <li key={item.label}>
             <a
               href={item.href}
+              title={item.label}
+              aria-label={item.label}
               style={{ color: '#555555' }}
-              className="flex items-center gap-2 text-[9px] tracking-[0.2em] uppercase hover:text-black transition-colors duration-300"
+              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 hover:text-black transition-all duration-200"
             >
-              <span className="opacity-60">{item.icon}</span>
-              {item.label}
+              {item.icon}
             </a>
           </li>
         ))}
       </ul>
 
-      {/* Mobile Actions */}
-      <div className="flex md:hidden items-center gap-6">
-        <button style={{ color: '#555555' }} className="text-[10px] tracking-[0.2em] uppercase font-medium">
-          Cart (0)
-        </button>
-        <button className="flex flex-col gap-1.5 items-end group focus:outline-none">
-          <div className="h-[1.5px] w-5 bg-[#555555]" />
-          <div className="h-[1.5px] w-3 bg-[#555555] transition-all group-hover:w-5" />
-        </button>
-      </div>
+      <div className="w-px h-5 bg-black/10 mx-1" />
 
-      {/* Desktop Cart */}
-      <div className="hidden md:flex items-center gap-3 pl-4 border-l border-black/5 ml-2">
-        <svg className="w-3.5 h-3.5 opacity-60" style={{ color: '#555555' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Cart icon only */}
+      <a href="#cart" aria-label="Cart" className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-all duration-200" style={{ color: '#555555' }}>
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
         </svg>
-        <div style={{ color: '#555555' }} className="text-[9px] tracking-[0.2em] uppercase">
-          Cart (0)
-        </div>
-      </div>
+      </a>
     </nav>
   );
 };
