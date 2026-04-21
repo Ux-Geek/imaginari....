@@ -14,10 +14,10 @@ export function ProductCard({ name, image }: ProductCardProps) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative aspect-[4/5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
+      className="group relative aspect-[3/4.5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-700 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
     >
       {/* Heart Icon */}
-      <div className="absolute top-4 right-4 z-20 text-black/30 transition-colors duration-300 group-hover:text-black">
+      <div className="absolute top-6 right-6 z-20 text-black/20 transition-colors duration-300 group-hover:text-black">
         <svg
           width="24"
           height="24"
@@ -32,18 +32,18 @@ export function ProductCard({ name, image }: ProductCardProps) {
         </svg>
       </div>
 
-      {/* Product Image */}
-      <div className="absolute inset-0 flex items-center justify-center p-8">
-        <img
+      {/* Product Image - No BG style */}
+      <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+        <motion.img
           src={image}
           alt={name}
-          className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-contain transition-transform duration-1000 ease-out group-hover:scale-110"
         />
       </div>
 
       {/* Product Name (Hover) */}
-      <div className="absolute bottom-6 left-6 z-20">
-        <p className="text-[11px] tracking-[0.2em] uppercase text-black opacity-0 transition-all duration-500 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+      <div className="absolute bottom-8 left-8 z-20">
+        <p className="text-[10px] tracking-[0.3em] uppercase text-black opacity-0 transition-all duration-700 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 font-medium">
           {name}
         </p>
       </div>

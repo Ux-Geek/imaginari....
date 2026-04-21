@@ -14,8 +14,8 @@ interface CatalogueRowProps {
 export const CatalogueRow = ({ products, className = "" }: CatalogueRowProps) => {
   return (
     <div className={`w-full py-20 ${className}`}>
-      <div className="mx-auto max-w-7xl px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+      <div className="w-full px-[8px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[8px]">
           {products.slice(0, 4).map((product, i) => (
             <motion.div
               key={product.name + i}
@@ -23,6 +23,7 @@ export const CatalogueRow = ({ products, className = "" }: CatalogueRowProps) =>
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.8 }}
+              className="w-full"
             >
               <ProductCard name={product.name} image={product.image} />
             </motion.div>

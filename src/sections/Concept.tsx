@@ -6,8 +6,8 @@ import { CatalogueRow } from "../components/CatalogueRow";
 const products = [
   { name: "Abuja Silk Shirt", image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&q=80&w=800" },
   { name: "Passage Overshirt", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&q=80&w=800" },
-  { name: "Recall Linen Set", image: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800" },
-  { name: "Meridian Cotton Top", image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800" },
+  { name: "Recall Linen Top", image: "https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=800" },
+  { name: "Meridian Cotton Shirt", image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800" },
 ];
 
 export const Concept = () => {

@@ -21,7 +21,6 @@ export const MobileApp = () => {
         <EntryMobile />
         <IdentityMobile />
         <ConceptMobile />
-        <CatalogueMobile />
         <FooterMobile />
       </div>
 

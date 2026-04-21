@@ -4,17 +4,17 @@ import { Poster } from "../components/Poster";
 import { CatalogueRow } from "../components/CatalogueRow";
 
 const products = [
-  { name: "Lagos Night Shirt", image: "https://images.unsplash.com/photo-1621072156002-e2fcced0b170?q=80&w=800" },
   { name: "Nomad Linen Top", image: "https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=800" },
-  { name: "Origin Tunic", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
-  { name: "Bridge Knit Shirt", image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=800" },
+  { name: "Bridge Knit Shirt", image: "https://images.unsplash.com/photo-1621072156002-e2fcced0b170?q=80&w=800" },
+  { name: "Urban Cotton Shirt", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800" },
+  { name: "Lagos Night Top", image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800" },
 ];
 
 export const Identity = () => {
   return (
     <section
         id="identity"
-        className="relative inverse-mode flex min-h-screen flex-col items-center justify-center px-8 text-center"
+        className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center bg-white"
       >
         <div className="relative max-w-3xl space-y-16 z-10">
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
@@ -34,7 +34,7 @@ export const Identity = () => {
             transition={{ duration: 1.2 }}
             className="pt-8"
           >
-            <p className="mx-auto max-w-lg text-base leading-relaxed text-brand-white/70">
+            <p className="mx-auto max-w-lg text-base leading-relaxed text-brand-green/70">
               there is a place that exists in you without asking permission
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export const Identity = () => {
             <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
               every city holds a version of you
             </p>
-            <p className="text-base text-brand-white/50 leading-relaxed font-serif italic">
+            <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
               rooted in the memory of where you began
             </p>
           </motion.div>

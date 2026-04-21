@@ -20,7 +20,6 @@ export const DesktopApp = () => {
       <Entry />
       <Identity />
       <Concept />
-      <Catalogue />
       <Footer />
 
       {/* Scroll Progress Bar */}

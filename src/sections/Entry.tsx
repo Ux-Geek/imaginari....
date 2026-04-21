@@ -4,10 +4,10 @@ import { Poster } from "../components/Poster";
 import { CatalogueRow } from "../components/CatalogueRow";
 
 const products = [
-  { name: "Drift Linen Shirt", image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800" },
-  { name: "Oxford Button Down", image: "https://images.unsplash.com/photo-1620012253295-c05718565a62?q=80&w=800" },
-  { name: "Classic Silk Shirt", image: "https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=800" },
-  { name: "Heritage Overshirt", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80&w=800" },
+  { name: "Signature Linen Shirt", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
+  { name: "Essential White Tee", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800" },
+  { name: "Oxford Button Down", image: "https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=800" },
+  { name: "Classic Black Tee", image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800" },
 ];
 
 export const Entry = () => {
@@ -104,7 +104,7 @@ export const Entry = () => {
       </div>
 
       {/* ─── Scroll-triggered poster section ─── */}
-      <div className="relative bg-[#0a120a] py-32 px-8 z-10">
+      <div className="relative bg-white py-32 px-8 z-10">
         {/* Story copy that appears on scroll */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -116,7 +116,7 @@ export const Entry = () => {
           <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold mb-6">
             The Collection
           </p>
-          <p className="text-2xl md:text-3xl font-serif text-white/80 leading-relaxed">
+          <p className="text-2xl md:text-3xl font-serif text-brand-green/80 leading-relaxed">
             there is a place that exists in you<br />
             without asking permission
           </p>
@@ -153,7 +153,7 @@ export const Entry = () => {
             <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
               and sometimes… you wear it
             </p>
-            <p className="text-base text-white/50 leading-relaxed font-serif italic">
+            <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
               distance changes your surroundings, not your origin
             </p>
           </motion.div>

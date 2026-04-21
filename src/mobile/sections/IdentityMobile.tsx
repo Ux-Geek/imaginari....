@@ -12,7 +12,7 @@ const products = [
 
 export const IdentityMobile = () => {
   return (
-    <section className="relative inverse-mode flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden">
+    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden bg-white">
       <div className="relative max-w-sm space-y-12 z-10">
         <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
         <div className="space-y-6">
@@ -31,7 +31,7 @@ export const IdentityMobile = () => {
           transition={{ duration: 1 }}
           className="pt-6"
         >
-          <p className="mx-auto max-w-xs text-sm leading-relaxed text-brand-white/70">
+          <p className="mx-auto max-w-xs text-sm leading-relaxed text-brand-green/70">
             there is a place that exists in you without asking permission
           </p>
         </motion.div>
