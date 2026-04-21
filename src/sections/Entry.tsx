@@ -1,6 +1,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Poster } from "../components/Poster";
+import { CatalogueRow } from "../components/CatalogueRow";
+
+const products = [
+  { name: "Drift Linen Shirt", image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800" },
+  { name: "Oxford Button Down", image: "https://images.unsplash.com/photo-1620012253295-c05718565a62?q=80&w=800" },
+  { name: "Classic Silk Shirt", image: "https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=800" },
+  { name: "Heritage Overshirt", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80&w=800" },
+];
 
 export const Entry = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -167,6 +175,9 @@ export const Entry = () => {
             />
           </motion.div>
         </div>
+
+        {/* Catalogue Row */}
+        <CatalogueRow products={products} className="mt-20" />
       </div>
     </section>
   );

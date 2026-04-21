@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { WordReveal } from "../../components/WordReveal";
 import { Poster } from "../../components/Poster";
+import { CatalogueRow } from "../../components/CatalogueRow";
+
+const products = [
+  { name: "Lagos Night Shirt", image: "https://images.unsplash.com/photo-1621072156002-e2fcced0b170?q=80&w=800" },
+  { name: "Nomad Linen Top", image: "https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=800" },
+  { name: "Origin Tunic", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
+  { name: "Bridge Knit Shirt", image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=800" },
+];
 
 export const IdentityMobile = () => {
   return (
@@ -45,6 +53,9 @@ export const IdentityMobile = () => {
             className="scale-[0.7] -ml-8"
           />
         </div>
+
+        {/* Catalogue Row */}
+        <CatalogueRow products={products} className="mt-12" />
       </div>
     </section>
   );

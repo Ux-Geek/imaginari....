@@ -1,0 +1,34 @@
+import { motion } from "framer-motion";
+import { ProductCard } from "./ProductCard";
+
+interface Product {
+  name: string;
+  image: string;
+}
+
+interface CatalogueRowProps {
+  products: Product[];
+  className?: string;
+}
+
+export const CatalogueRow = ({ products, className = "" }: CatalogueRowProps) => {
+  return (
+    <div className={`w-full py-20 ${className}`}>
+      <div className="mx-auto max-w-7xl px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          {products.slice(0, 4).map((product, i) => (
+            <motion.div
+              key={product.name + i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.8 }}
+            >
+              <ProductCard name={product.name} image={product.image} />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

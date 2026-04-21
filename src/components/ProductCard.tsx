@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface ProductCardProps {
   name: string;
@@ -8,73 +8,45 @@ interface ProductCardProps {
   category?: string;
 }
 
-export function ProductCard({ name, image, price, category }: ProductCardProps) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x);
-  const mouseYSpring = useSpring(y);
-
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], [7, -7]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], [-7, 7]);
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-
-    x.set(xPct);
-    y.set(yPct);
-  }
-
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
-  }
-
+export function ProductCard({ name, image }: ProductCardProps) {
   return (
     <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-      className="group relative aspect-[3/4] w-full max-w-sm overflow-hidden bg-[#F5F5F5]"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="group relative aspect-[4/5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
     >
-      <div
-        style={{
-          transform: "translateZ(50px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute inset-0 flex flex-col justify-end p-4 md:p-8"
-      >
-        <motion.img
+      {/* Heart Icon */}
+      <div className="absolute top-4 right-4 z-20 text-black/30 transition-colors duration-300 group-hover:text-black">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="0.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.84-8.84 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </div>
+
+      {/* Product Image */}
+      <div className="absolute inset-0 flex items-center justify-center p-8">
+        <img
           src={image}
           alt={name}
-          referrerPolicy="no-referrer"
-          className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+          className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
         />
-        
-        <div className="relative z-10 space-y-1">
-          {category && (
-            <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-brand-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-              {category}
-            </p>
-          )}
-          <h3 className="text-base md:text-lg font-medium text-brand-green">{name}</h3>
-          {price && <p className="text-xs md:text-sm text-brand-green/60">{price}</p>}
-        </div>
       </div>
-      
-      {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-brand-green/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+      {/* Product Name (Hover) */}
+      <div className="absolute bottom-6 left-6 z-20">
+        <p className="text-[11px] tracking-[0.2em] uppercase text-black opacity-0 transition-all duration-500 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+          {name}
+        </p>
+      </div>
     </motion.div>
   );
 }
