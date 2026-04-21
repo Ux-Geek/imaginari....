@@ -4,7 +4,7 @@ import { Cursor } from "./components/Cursor";
 import { Entry } from "./sections/Entry";
 import { Identity } from "./sections/Identity";
 import { Concept } from "./sections/Concept";
-import { Catalogue } from "./sections/Catalogue";
+import { Legacy } from "./sections/Legacy";
 import { Footer } from "./sections/Footer";
 import { SideNav } from "./components/SideNav";
 
@@ -20,6 +20,7 @@ export const DesktopApp = () => {
       <Entry />
       <Identity />
       <Concept />
+      <Legacy />
       <Footer />
 
       {/* Scroll Progress Bar */}

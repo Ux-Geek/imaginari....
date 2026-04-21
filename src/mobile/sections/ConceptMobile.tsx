@@ -6,8 +6,12 @@ import { CatalogueRow } from "../../components/CatalogueRow";
 const products = [
   { name: "Abuja Silk Shirt", image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&q=80&w=800" },
   { name: "Passage Overshirt", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&q=80&w=800" },
-  { name: "Recall Linen Set", image: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800" },
-  { name: "Meridian Cotton Top", image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800" },
+  { name: "Recall Linen Top", image: "https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=800" },
+  { name: "Meridian Cotton Shirt", image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=800" },
+  { name: "Horizon Silk Set", image: "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?auto=format&fit=crop&q=80&w=800" },
+  { name: "Dune Overshirt", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
+  { name: "Anchor Knit Shirt", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" },
+  { name: "Kora Silk Shirt", image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&q=80&w=800" },
 ];
 
 export const ConceptMobile = () => {
@@ -54,8 +58,11 @@ export const ConceptMobile = () => {
           />
         </div>
 
-        {/* Catalogue Row */}
-        <CatalogueRow products={products} className="mt-12" />
+        {/* Catalogue Rows */}
+        <div className="space-y-4">
+          <CatalogueRow products={products.slice(0, 4)} className="pt-12 pb-0" />
+          <CatalogueRow products={products.slice(4, 8)} className="pt-0 pb-12" />
+        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { EntryMobile } from "./sections/EntryMobile";
 import { IdentityMobile } from "./sections/IdentityMobile";
 import { ConceptMobile } from "./sections/ConceptMobile";
-import { CatalogueMobile } from "./sections/CatalogueMobile";
+import { LegacyMobile } from "./sections/LegacyMobile";
 import { FooterMobile } from "./sections/FooterMobile";
 
 import { SideNav } from "../components/SideNav";
@@ -21,6 +21,7 @@ export const MobileApp = () => {
         <EntryMobile />
         <IdentityMobile />
         <ConceptMobile />
+        <LegacyMobile />
         <FooterMobile />
       </div>
 
