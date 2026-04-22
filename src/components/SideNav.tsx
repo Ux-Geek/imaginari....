@@ -31,19 +31,17 @@ export const SideNav = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className={`fixed top-0 left-0 right-0 z-[100] h-[64px] flex items-center px-6 md:px-10 transition-all duration-300 ${
-            scrolled
+          className={`fixed top-0 left-0 right-0 z-[100] h-[64px] flex items-center px-6 md:px-10 transition-all duration-300 ${scrolled
               ? "bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm"
               : "bg-transparent"
-          }`}
+            }`}
         >
           {/* ─── Brand wordmark ─── */}
           <a
             href="#"
             aria-label="MAGINARI home"
-            className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${
-              scrolled ? "text-[#333333]" : "text-white"
-            }`}
+            className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${scrolled ? "text-[#333333]" : "text-white"
+              }`}
           >
             MAGINARI
           </a>
@@ -53,11 +51,10 @@ export const SideNav = () => {
 
           {/* ─── Search bar (desktop) ─── */}
           <div
-            className={`hidden md:flex items-center gap-2 rounded-full px-4 py-1.5 mr-4 transition-all duration-300 ${
-              scrolled
+            className={`hidden md:flex items-center gap-2 rounded-full px-4 py-1.5 mr-4 transition-all duration-300 ${scrolled
                 ? "bg-black/5 text-[#333333]"
                 : "bg-white/10 text-white"
-            }`}
+              }`}
           >
             <svg className="w-3.5 h-3.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
@@ -74,9 +71,8 @@ export const SideNav = () => {
             {/* Search icon (mobile) */}
             <button
               aria-label="Search"
-              className={`flex md:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-[#333333]" : "text-white"
-              }`}
+              className={`flex md:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+                }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
@@ -86,9 +82,8 @@ export const SideNav = () => {
             {/* Favourites */}
             <button
               aria-label="Favourites"
-              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-[#333333]" : "text-white"
-              }`}
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+                }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -98,9 +93,8 @@ export const SideNav = () => {
             {/* Profile */}
             <button
               aria-label="Profile"
-              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-[#333333]" : "text-white"
-              }`}
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+                }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -110,9 +104,8 @@ export const SideNav = () => {
             {/* Cart */}
             <button
               aria-label="Cart"
-              className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${
-                scrolled ? "text-[#333333]" : "text-white"
-              }`}
+              className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+                }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />

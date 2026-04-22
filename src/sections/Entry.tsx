@@ -4,10 +4,10 @@ import { Poster } from "../components/Poster";
 import { CatalogueRow } from "../components/CatalogueRow";
 
 const products = [
-  { name: "Signature Linen Shirt", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
-  { name: "Essential White Tee", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800" },
-  { name: "Oxford Button Down", image: "https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=800" },
-  { name: "Classic Black Tee", image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800" },
+  { id: "signature-linen-shirt", name: "Signature Linen Shirt", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
+  { id: "essential-white-tee", name: "Essential White Tee", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800" },
+  { id: "oxford-button-down", name: "Oxford Button Down", image: "https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=800" },
+  { id: "classic-black-tee", name: "Classic Black Tee", image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800" },
 ];
 
 export const Entry = () => {

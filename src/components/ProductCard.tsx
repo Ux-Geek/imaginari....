@@ -1,21 +1,23 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 interface ProductCardProps {
+  id: string;
   name: string;
   image: string;
   price?: string;
   category?: string;
 }
 
-export function ProductCard({ name, image }: ProductCardProps) {
+export function ProductCard({ id, name, image }: ProductCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="group relative aspect-[3/4.5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-700 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
-    >
+    <Link to={`/product/${id}`} className="block">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="group relative aspect-[3/4.5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-700 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+      >
       {/* Heart Icon */}
       <div className="absolute top-6 right-6 z-20 text-black/20 transition-colors duration-300 group-hover:text-black">
         <svg
@@ -47,6 +49,7 @@ export function ProductCard({ name, image }: ProductCardProps) {
           {name}
         </p>
       </div>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 }
