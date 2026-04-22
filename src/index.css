@@ -24,3 +24,29 @@
 .gold-accent {
   @apply text-brand-gold;
 }
+
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  50%, 100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(198, 167, 94, 0.4),
+    transparent
+  );
+  animation: shine 2s infinite ease-in-out;
+}

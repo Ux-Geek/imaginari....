@@ -111,7 +111,7 @@ export const ProductDetail = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="flex-1 py-5 border border-brand-green text-brand-green text-[11px] tracking-[0.5em] uppercase hover:bg-brand-green hover:text-white transition-all duration-500">
+              <button className="flex-1 py-5 border border-brand-green text-brand-green text-[11px] tracking-[0.5em] uppercase hover:bg-brand-green hover:text-white transition-all duration-500 animate-shine">
                 Try it on
               </button>
               <button className="flex-1 py-5 bg-brand-green text-white text-[11px] tracking-[0.5em] uppercase hover:bg-black transition-colors duration-500">
