@@ -1,64 +1,52 @@
 import { motion } from "framer-motion";
 import { WordReveal } from "../../components/WordReveal";
-import { Poster } from "../../components/Poster";
-import { CatalogueRow } from "../../components/CatalogueRow";
-
-const products = [
-  { name: "Legacy Silk Shirt", image: "https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=800" },
-  { name: "Dakar Overshirt", image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=800" },
-  { name: "Borderline Tunic", image: "https://images.unsplash.com/photo-1621072156002-e2fcced0b170?q=80&w=800" },
-  { name: "Heritage Knit", image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=800" },
-];
 
 export const LegacyMobile = () => {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden bg-white">
-      <div className="relative max-w-sm space-y-10 z-10 w-full">
-        <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">The Legacy</p>
+    <section className="relative h-screen w-full flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1520006403991-2c9e0822ca35?q=90&w=2560&auto=format&fit=crop"
+          alt="Abstract textile legacy"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      <div className="relative z-10 space-y-10 w-full">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-[9px] tracking-[0.4em] uppercase text-brand-gold"
+        >
+          The Legacy
+        </motion.p>
+        
         <div className="space-y-4">
           <WordReveal 
             text="memory is the only land" 
-            className="text-3xl leading-tight justify-center"
+            className="text-4xl text-white leading-tight justify-center"
           />
           <WordReveal 
             text="without borders" 
-            className="text-3xl leading-tight justify-center"
+            className="text-4xl text-white leading-tight justify-center"
           />
         </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1.2 }}
-          className="pt-6 space-y-10"
+          className="pt-6"
         >
-          <p className="text-lg text-brand-green/80 italic">
+          <p className="text-lg text-white/70 italic">
             what we keep is what we carry
           </p>
-          <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold">
-            a geography of the heart
-          </p>
+          <div className="w-px h-16 bg-gradient-to-b from-brand-gold to-transparent mx-auto mt-10" />
         </motion.div>
-
-        {/* Poster Cards - Smaller and centered for Mobile */}
-        <div className="relative flex justify-center gap-4 mt-8 w-full px-4 overflow-visible">
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=800" 
-            cityName="Dakar"
-            theme="black"
-            rotation={-8}
-            className="scale-[0.7] -mr-8"
-          />
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800" 
-            cityName="Paris"
-            theme="gold"
-            rotation={10}
-            className="scale-[0.7] -ml-8"
-          />
-        </div>
-
-        {/* Catalogue Row */}
-        <CatalogueRow products={products} className="mt-12" />
       </div>
     </section>
   );
