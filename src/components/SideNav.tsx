@@ -10,10 +10,11 @@ export const SideNav = () => {
     const onScroll = () => {
       const y = window.scrollY;
       const goingUp = y < lastY.current;
+      const isMobile = window.innerWidth < 768;
 
       setScrolled(y > 40);
-      // Show bar: always at top, or when scrolling UP
-      setVisible(y < 40 || goingUp);
+      // Show bar: always at top, when scrolling UP, or ALWAYS if on mobile
+      setVisible(y < 40 || goingUp || isMobile);
       lastY.current = y;
     };
 
@@ -39,12 +40,12 @@ export const SideNav = () => {
           {/* ─── Brand wordmark ─── */}
           <a
             href="#"
-            aria-label="Imaginari home"
+            aria-label="MAGINARI home"
             className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${
               scrolled ? "text-[#333333]" : "text-white"
             }`}
           >
-            Imaginari
+            MAGINARI
           </a>
 
           {/* ─── Spacer ─── */}

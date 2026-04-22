@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="mx-auto max-w-full">
         <div className="flex flex-col md:flex-row justify-between items-start gap-20 md:gap-8 mb-40">
           <div className="space-y-12">
-            <div className="text-2xl tracking-[0.5em] uppercase font-light">Imaginari</div>
+            <div className="text-2xl tracking-[0.5em] uppercase font-light">MAGINARI</div>
             <p className="max-w-xs text-sm leading-relaxed text-brand-green/40">
               distance changes your surroundings, not your origin.
             </p>
@@ -57,7 +57,7 @@ export const Footer = () => {
           
           <div className="absolute bottom-0 left-0 w-full flex justify-between items-end pb-8">
             <div className="text-[9px] tracking-[0.3em] uppercase text-brand-green/30">
-              © 2026 Imaginari
+              © 2026 MAGINARI
             </div>
             <div className="text-[9px] tracking-[0.3em] uppercase text-brand-green/30">
               All rights reserved
