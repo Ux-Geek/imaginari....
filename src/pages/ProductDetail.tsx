@@ -6,12 +6,14 @@ import { Footer } from "../sections/Footer";
 import { FooterMobile } from "../mobile/sections/FooterMobile";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useEffect, useState } from "react";
+import { TryOnModal } from "../components/TryOnModal";
 
 export const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const [isTryOnOpen, setIsTryOnOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -111,7 +113,10 @@ export const ProductDetail = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="flex-1 py-5 border border-brand-green text-brand-green text-[11px] tracking-[0.5em] uppercase hover:bg-brand-green hover:text-white transition-all duration-500 animate-shine">
+              <button 
+                onClick={() => setIsTryOnOpen(true)}
+                className="flex-1 py-5 border border-brand-green text-brand-green text-[11px] tracking-[0.5em] uppercase hover:bg-brand-green hover:text-white transition-all duration-500 animate-shine"
+              >
                 Try it on
               </button>
               <button className="flex-1 py-5 bg-brand-green text-white text-[11px] tracking-[0.5em] uppercase hover:bg-black transition-colors duration-500">
@@ -176,6 +181,12 @@ export const ProductDetail = () => {
       </main>
 
       {isMobile ? <FooterMobile /> : <Footer />}
+
+      <TryOnModal 
+        isOpen={isTryOnOpen} 
+        onClose={() => setIsTryOnOpen(false)} 
+        product={product} 
+      />
     </div>
   );
 };
