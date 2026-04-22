@@ -16,52 +16,73 @@ const products = [
 
 export const ConceptMobile = () => {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center overflow-hidden">
-      <div className="relative max-w-sm space-y-10 z-10">
+    <section className="relative flex flex-col items-center justify-center px-6 text-center bg-white py-24">
+      <div className="relative max-w-sm space-y-12 z-10">
         <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <WordReveal 
             text="imaginary is not a place" 
             className="text-3xl leading-tight justify-center"
           />
         </div>
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1.2 }}
-          className="pt-6 space-y-10"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="pt-6 space-y-8"
         >
           <p className="text-lg text-brand-green/80 italic">
             it is how you return without moving
           </p>
-          
           <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold">
             and sometimes… you wear it
           </p>
         </motion.div>
 
-        {/* Poster Cards - Smaller and centered for Mobile */}
-        <div className="relative flex justify-center gap-4 mt-8 w-full px-4 overflow-visible">
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1539410849639-9ea07149666c?q=80&w=800" 
-            cityName="Marrakesh"
-            theme="gold"
-            rotation={-10}
-            className="scale-[0.7] -mr-8"
-          />
-          <Poster 
-            cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800" 
-            cityName="Accra"
-            theme="black"
-            rotation={6}
-            className="scale-[0.7] -ml-8"
-          />
+        {/* Separated Posters with Copy */}
+        <div className="mt-16 space-y-12 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="self-start"
+          >
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1539410849639-9ea07149666c?q=80&w=800" 
+              cityName="Marrakesh"
+              theme="gold"
+              rotation={-6}
+              className="scale-[0.8]"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="py-8"
+          >
+            <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold mb-2">worn across continents</p>
+            <p className="text-sm font-serif italic text-brand-green/60">cloth as cartography — every thread a longitude</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="self-end"
+          >
+            <Poster 
+              cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800" 
+              cityName="Accra"
+              theme="black"
+              rotation={8}
+              className="scale-[0.8]"
+            />
+          </motion.div>
         </div>
 
         {/* Catalogue Rows */}
-        <div className="space-y-4">
-          <CatalogueRow products={products.slice(0, 4)} className="pt-12 pb-0" />
-          <CatalogueRow products={products.slice(4, 8)} className="pt-0 pb-12" />
+        <div className="space-y-4 mt-16">
+          <CatalogueRow products={products.slice(0, 4)} className="pt-0 pb-0" />
+          <CatalogueRow products={products.slice(4, 8)} className="pt-0 pb-0" />
         </div>
       </div>
     </section>
