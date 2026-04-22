@@ -37,7 +37,7 @@ export function ProductCard({ name, image }: ProductCardProps) {
         <motion.img
           src={image}
           alt={name}
-          className="h-full w-full object-contain transition-transform duration-1000 ease-out group-hover:scale-110"
+          className="h-full w-full object-contain transition-transform duration-1000 ease-out group-hover:scale-110 mix-blend-multiply"
         />
       </div>
 

@@ -52,7 +52,7 @@ export const Footer = () => {
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="text-[15vw] font-serif leading-none text-black/[0.03] select-none pointer-events-none text-center whitespace-nowrap"
           >
-            IMAGINARI
+            MAGINARI
           </motion.h2>
           
           <div className="absolute bottom-0 left-0 w-full flex justify-between items-end pb-8">
