@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const SideNav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,14 +38,14 @@ export const SideNav = () => {
             }`}
         >
           {/* ─── Brand wordmark ─── */}
-          <a
-            href="#"
+          <Link
+            to="/"
             aria-label="MAGINARI home"
             className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${scrolled ? "text-[#333333]" : "text-white"
               }`}
           >
             MAGINARI
-          </a>
+          </Link>
 
           {/* ─── Spacer ─── */}
           <div className="flex-1" />
