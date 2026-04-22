@@ -73,11 +73,11 @@ export const EntryMobile = () => {
       </div>
 
       {/* Collection Section */}
-      <div className="relative bg-white py-24 px-6 z-10">
+      <div className="relative bg-white py-24 px-0 z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-6"
         >
           <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold mb-4">The Collection</p>
           <p className="text-xl font-serif text-brand-green/80 leading-relaxed">

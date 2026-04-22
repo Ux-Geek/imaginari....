@@ -10,11 +10,11 @@ export const SideNav = () => {
     const onScroll = () => {
       const y = window.scrollY;
       const goingUp = y < lastY.current;
-      const isMobile = window.innerWidth < 768;
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
       setScrolled(y > 40);
-      // Show bar: always at top, when scrolling UP, or ALWAYS if on mobile
-      setVisible(y < 40 || goingUp || isMobile);
+      // Always visible on mobile, otherwise scroll-triggered
+      setVisible(isMobile || y < 40 || goingUp);
       lastY.current = y;
     };
 

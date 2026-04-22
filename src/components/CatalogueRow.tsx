@@ -14,7 +14,7 @@ interface CatalogueRowProps {
 export const CatalogueRow = ({ products, className = "" }: CatalogueRowProps) => {
   return (
     <div className={`w-full py-12 md:py-20 ${className}`}>
-      <div className="w-full px-0 md:px-[8px]">
+      <div className="w-full px-0">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-[8px]">
           {products.slice(0, 4).map((product, i) => (
             <motion.div
