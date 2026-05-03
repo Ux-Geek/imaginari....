@@ -53,7 +53,7 @@ export const Identity = () => {
             <Poster
               cityImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800"
               cityName="Tokyo"
-              theme="black"
+              theme="gold"
               rotation={-4}
               className=""
             />

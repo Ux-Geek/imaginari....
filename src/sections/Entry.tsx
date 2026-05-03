@@ -169,7 +169,7 @@ export const Entry = () => {
             <Poster
               cityImage="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800"
               cityName="London"
-              theme="black"
+              theme="gold"
               rotation={4}
               className=""
             />

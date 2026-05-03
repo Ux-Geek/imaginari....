@@ -47,7 +47,7 @@ export const IdentityMobile = () => {
               <Poster 
                 cityImage="https://images.unsplash.com/photo-1540959733332-e2fcced0b170?q=80&w=800" 
                 cityName="Tokyo"
-                theme="black"
+                theme="gold"
                 rotation={-6}
                 className="scale-[0.8]"
               />

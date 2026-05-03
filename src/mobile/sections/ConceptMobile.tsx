@@ -73,7 +73,7 @@ export const ConceptMobile = () => {
               <Poster 
                 cityImage="https://images.unsplash.com/photo-1588661706680-e37456d2db24?q=80&w=800" 
                 cityName="Accra"
-                theme="black"
+                theme="gold"
                 rotation={8}
                 className="scale-[0.8]"
               />
