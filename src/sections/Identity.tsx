@@ -14,18 +14,18 @@ export const Identity = () => {
   return (
     <section
         id="identity"
-        className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center bg-white"
+        className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center bg-bg-elevated section"
       >
         <div className="relative max-w-3xl space-y-16 z-10">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
+          <p className="section-eyebrow">Identity</p>
           <div className="space-y-8">
             <WordReveal
               text="distance changes your surroundings"
-              className="text-3xl md:text-4xl leading-relaxed justify-center"
+              className="font-display text-4xl tracking-wide text-text-primary justify-center"
             />
             <WordReveal
               text="not your origin"
-              className="text-3xl md:text-4xl leading-relaxed justify-center"
+              className="font-display text-4xl tracking-wide text-text-primary justify-center"
             />
           </div>
           <motion.div
@@ -34,7 +34,7 @@ export const Identity = () => {
             transition={{ duration: 1.2 }}
             className="pt-8"
           >
-            <p className="mx-auto max-w-lg text-base leading-relaxed text-brand-green/70">
+            <p className="mx-auto max-w-lg t-editorial text-text-muted">
               there is a place that exists in you without asking permission
             </p>
           </motion.div>
@@ -67,10 +67,10 @@ export const Identity = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             className="text-center py-14 px-8 max-w-sm mx-auto"
           >
-            <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
+            <p className="t-micro text-olive-400 mb-4">
               every city holds a version of you
             </p>
-            <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
+            <p className="t-editorial text-text-muted">
               rooted in the memory of where you began
             </p>
           </motion.div>

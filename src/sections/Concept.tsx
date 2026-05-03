@@ -18,14 +18,14 @@ export const Concept = () => {
   return (
     <section
       id="concept"
-      className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center px-8 text-center bg-bg-base section"
     >
       <div className="relative max-w-2xl space-y-12 z-10">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
+        <p className="section-eyebrow">The Concept</p>
         <div className="space-y-4">
           <WordReveal
             text="imaginary is not a place"
-            className="text-4xl md:text-5xl leading-tight justify-center"
+            className="t-display justify-center"
           />
         </div>
         <motion.div
@@ -34,10 +34,10 @@ export const Concept = () => {
           transition={{ delay: 0.5, duration: 1.5 }}
           className="pt-8 space-y-12"
         >
-          <p className="text-xl text-brand-green/80">
+          <p className="t-editorial text-text-muted">
             it is how you return without moving
           </p>
-          <p className="text-sm tracking-[0.2em] uppercase text-brand-gold">
+          <p className="t-micro text-olive-400">
             and sometimes… you wear it
           </p>
         </motion.div>
@@ -70,10 +70,10 @@ export const Concept = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           className="text-center py-14 px-8 max-w-sm mx-auto"
         >
-          <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
+          <p className="t-micro text-olive-400 mb-4">
             worn across continents
           </p>
-          <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
+          <p className="t-editorial text-text-muted">
             cloth as cartography — every thread a longitude
           </p>
         </motion.div>

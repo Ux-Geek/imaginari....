@@ -60,7 +60,7 @@ export const Entry = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="text-[10px] tracking-[0.5em] uppercase text-brand-gold mb-10"
+            className="section-eyebrow"
           >
             Entry
           </motion.p>
@@ -70,18 +70,18 @@ export const Entry = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tight"
+            className="t-hero text-center"
           >
             you don't arrive
             <br />
-            <em className="text-brand-gold">you remember</em>
+            <em className="text-olive-400 font-editorial font-normal">you remember</em>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.6, duration: 1.5 }}
-            className="mt-10 text-lg italic text-white/50"
+            className="mt-10 t-editorial text-text-dim"
           >
             something in you never left
           </motion.p>
@@ -104,7 +104,7 @@ export const Entry = () => {
       </div>
 
       {/* ─── Scroll-triggered poster section ─── */}
-      <div className="relative bg-white py-32 px-8 z-10">
+      <div className="relative bg-bg-base py-32 px-8 z-10 section">
         {/* Story copy that appears on scroll */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -113,10 +113,10 @@ export const Entry = () => {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-lg mx-auto mb-24"
         >
-          <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold mb-6">
+          <p className="section-eyebrow">
             The Collection
           </p>
-          <p className="text-2xl md:text-3xl font-serif text-brand-green/80 leading-relaxed">
+          <p className="t-editorial text-text-primary mt-4">
             there is a place that exists in you<br />
             without asking permission
           </p>
@@ -150,10 +150,10 @@ export const Entry = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             className="text-center py-16 px-8 max-w-sm mx-auto"
           >
-            <p className="text-sm tracking-[0.2em] uppercase text-brand-gold mb-4">
+            <p className="t-micro text-olive-400 mb-4">
               and sometimes… you wear it
             </p>
-            <p className="text-base text-brand-green/50 leading-relaxed font-serif italic">
+            <p className="t-editorial text-text-muted">
               distance changes your surroundings, not your origin
             </p>
           </motion.div>

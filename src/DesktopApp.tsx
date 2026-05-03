@@ -13,7 +13,7 @@ export const DesktopApp = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <main ref={containerRef} className="relative min-h-screen">
+    <main ref={containerRef} className="relative min-h-screen bg-bg-base">
       <Cursor />
       <SideNav />
 
@@ -25,7 +25,7 @@ export const DesktopApp = () => {
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed bottom-0 left-0 h-1 bg-brand-gold origin-left z-[60]"
+        className="fixed bottom-0 left-0 h-1 bg-olive-400 origin-left z-[60]"
         style={{ scaleX: scrollYProgress }}
       />
     </main>

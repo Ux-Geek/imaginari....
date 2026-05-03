@@ -16,8 +16,8 @@ export const Poster: React.FC<PosterProps> = ({
   className, 
   rotation = 0 
 }) => {
-  const frameColor = theme === "gold" ? "#C6A75E" : "#1E1E1E";
-  const shadowColor = theme === "gold" ? "rgba(198, 167, 94, 0.25)" : "rgba(0, 0, 0, 0.4)";
+  const frameColor = theme === "gold" ? "#b5a96a" : "#2a2a27";
+  const shadowColor = theme === "gold" ? "rgba(181, 169, 106, 0.25)" : "rgba(0, 0, 0, 0.4)";
 
   return (
     <motion.div
@@ -88,17 +88,17 @@ export const Poster: React.FC<PosterProps> = ({
           />
           
           {/* Subtle Overlay */}
-          <rect x="17" y="17" width="366" height="466" fill={theme === "gold" ? "rgba(198, 167, 94, 0.05)" : "rgba(0,0,0,0.1)"} />
+          <rect x="17" y="17" width="366" height="466" fill={theme === "gold" ? "rgba(181, 169, 106, 0.15)" : "rgba(0,0,0,0.1)"} />
           
           {/* City Name Typography */}
           <text 
             x="50%" 
             y="430" 
             textAnchor="middle" 
-            fill="#737373" 
+            fill="#f4f0e4" 
             style={{ 
-              fontFamily: "'Ibarra Real Nova', serif", 
-              fontSize: "44px", 
+              fontFamily: "'Bebas Neue', sans-serif", 
+              fontSize: "56px", 
               fontWeight: 500,
               letterSpacing: "0.05em",
               textTransform: "uppercase"
