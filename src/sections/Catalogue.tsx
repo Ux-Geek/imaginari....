@@ -78,7 +78,7 @@ const products = [
 
 export const Catalogue = () => {
   return (
-    <section id="catalogue" className="bg-white px-8 py-32">
+    <section id="catalogue" className="bg-bg-base px-8 py-32 section">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -88,18 +88,18 @@ export const Catalogue = () => {
           className="mb-24 flex flex-col justify-between gap-8 md:flex-row md:items-end"
         >
           <div className="space-y-4">
-            <h2 className="text-3xl font-light tracking-tight">Catalogue 01</h2>
-            <p className="max-w-md text-sm text-brand-green/60 leading-relaxed">
+            <h2 className="t-title-md text-text-primary">Catalogue 01</h2>
+            <p className="max-w-md t-editorial text-text-muted leading-relaxed">
               Pieces designed for the quiet return. Intentional silhouettes,
               cultural anchors, and the weight of home.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 text-[10px] tracking-[0.2em] uppercase">
-            <button className="border-b border-brand-green pb-1">All Pieces</button>
-            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Knitwear</button>
-            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Tailoring</button>
-            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Outerwear</button>
-            <button className="text-brand-green/40 hover:text-brand-green transition-colors">Accessories</button>
+          <div className="flex flex-wrap gap-4 t-micro">
+            <button className="border-b border-olive-400 text-olive-400 pb-1">All Pieces</button>
+            <button className="text-text-muted hover:text-text-primary transition-colors">Knitwear</button>
+            <button className="text-text-muted hover:text-text-primary transition-colors">Tailoring</button>
+            <button className="text-text-muted hover:text-text-primary transition-colors">Outerwear</button>
+            <button className="text-text-muted hover:text-text-primary transition-colors">Accessories</button>
           </div>
         </motion.div>
 
@@ -112,7 +112,7 @@ export const Catalogue = () => {
               viewport={{ once: true }}
               transition={{ delay: (i % 4) * 0.08, duration: 0.8 }}
             >
-              <ProductCard {...product} />
+              <ProductCard {...product} id={product.name.toLowerCase().replace(/\s+/g, '-')} />
             </motion.div>
           ))}
         </div>

@@ -20,7 +20,7 @@ export const LegacyMobile = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-[9px] tracking-[0.4em] uppercase text-brand-gold"
+          className="t-micro tracking-[0.6em] text-olive-400"
         >
           The Legacy
         </motion.p>
@@ -28,11 +28,11 @@ export const LegacyMobile = () => {
         <div className="space-y-4">
           <WordReveal 
             text="memory is the only land" 
-            className="text-4xl text-white leading-tight justify-center"
+            className="font-display text-4xl text-text-primary leading-none justify-center"
           />
           <WordReveal 
             text="without borders" 
-            className="text-4xl text-white leading-tight justify-center"
+            className="font-display text-4xl text-text-primary leading-none justify-center"
           />
         </div>
 
@@ -42,10 +42,10 @@ export const LegacyMobile = () => {
           transition={{ delay: 0.4, duration: 1.2 }}
           className="pt-6"
         >
-          <p className="text-lg text-white/70 italic">
+          <p className="t-editorial text-text-secondary text-lg">
             what we keep is what we carry
           </p>
-          <div className="w-px h-16 bg-gradient-to-b from-brand-gold to-transparent mx-auto mt-10" />
+          <div className="w-px h-16 bg-gradient-to-b from-olive-400 to-transparent mx-auto mt-10" />
         </motion.div>
       </div>
     </section>

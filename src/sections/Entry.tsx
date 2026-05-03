@@ -93,7 +93,7 @@ export const Entry = () => {
             transition={{ delay: 2.2, duration: 1 }}
             className="absolute bottom-10 flex flex-col items-center gap-2"
           >
-            <span className="text-[9px] tracking-[0.4em] uppercase text-white/40">Scroll</span>
+            <span className="t-micro text-text-dim">Scroll</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

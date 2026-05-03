@@ -45,7 +45,7 @@ export const EntryMobile = () => {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[9px] tracking-[0.4em] uppercase text-brand-gold mb-8"
+            className="section-eyebrow text-olive-400 mb-8"
           >
             Entry
           </motion.p>
@@ -53,11 +53,11 @@ export const EntryMobile = () => {
           <div className="space-y-4">
             <WordReveal 
               text="you don't arrive" 
-              className="text-4xl leading-tight justify-center text-white"
+              className="t-display text-text-primary justify-center"
             />
             <WordReveal 
               text="you remember" 
-              className="text-4xl leading-tight justify-center text-brand-gold italic"
+              className="font-display text-4xl leading-tight text-olive-400 font-normal justify-center"
             />
           </div>
 
@@ -65,7 +65,7 @@ export const EntryMobile = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-8 text-sm italic text-white/50"
+            className="mt-8 t-editorial text-text-dim"
           >
             something in you never left
           </motion.p>
@@ -73,14 +73,14 @@ export const EntryMobile = () => {
       </div>
 
       {/* Collection Section */}
-      <div className="relative bg-white py-24 px-0 z-10">
+      <div className="relative bg-bg-base py-24 px-0 z-10 section">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16 px-6"
         >
-          <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold mb-4">The Collection</p>
-          <p className="text-xl font-serif text-brand-green/80 leading-relaxed">
+          <p className="section-eyebrow text-olive-400 mb-4">The Collection</p>
+          <p className="t-editorial text-text-primary">
             there is a place that exists in you without asking permission
           </p>
         </motion.div>

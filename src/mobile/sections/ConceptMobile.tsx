@@ -16,14 +16,14 @@ const products = [
 
 export const ConceptMobile = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center px-0 text-center bg-white py-24">
+    <section className="relative flex flex-col items-center justify-center px-0 text-center bg-bg-base section py-24">
       <div className="relative w-full space-y-12 z-10">
         <div className="px-6 space-y-12">
-          <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">The Concept</p>
+          <p className="section-eyebrow text-olive-400">The Concept</p>
           <div className="space-y-6">
             <WordReveal 
               text="imaginary is not a place" 
-              className="text-3xl leading-tight justify-center"
+              className="t-display text-text-primary justify-center"
             />
           </div>
           <motion.div
@@ -32,10 +32,10 @@ export const ConceptMobile = () => {
             transition={{ duration: 1 }}
             className="pt-6 space-y-8"
           >
-            <p className="text-lg text-brand-green/80 italic">
+            <p className="t-editorial text-text-muted">
               it is how you return without moving
             </p>
-            <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold">
+            <p className="t-micro text-olive-400">
               and sometimes… you wear it
             </p>
           </motion.div>
@@ -61,8 +61,8 @@ export const ConceptMobile = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="py-8"
             >
-              <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold mb-2">worn across continents</p>
-              <p className="text-sm font-serif italic text-brand-green/60">cloth as cartography — every thread a longitude</p>
+              <p className="t-micro text-olive-400 mb-2">worn across continents</p>
+              <p className="t-editorial text-text-muted text-sm">cloth as cartography — every thread a longitude</p>
             </motion.div>
 
             <motion.div

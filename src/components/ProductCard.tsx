@@ -16,10 +16,10 @@ export function ProductCard({ id, name, image }: ProductCardProps) {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="group relative aspect-[3/4.5] w-full overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-700 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+        className="group relative aspect-[3/4.5] w-full overflow-hidden bg-bg-card rounded-md transition-all duration-700 hover:bg-bg-card-hover"
       >
       {/* Heart Icon */}
-      <div className="absolute top-6 right-6 z-20 text-black/20 transition-colors duration-300 group-hover:text-black">
+      <div className="absolute top-6 right-6 z-20 text-white/20 transition-colors duration-300 group-hover:text-olive-400">
         <svg
           width="24"
           height="24"
@@ -39,13 +39,13 @@ export function ProductCard({ id, name, image }: ProductCardProps) {
         <motion.img
           src={image}
           alt={name}
-          className="h-full w-full object-contain transition-transform duration-1000 ease-out group-hover:scale-110 mix-blend-multiply"
+          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
         />
       </div>
 
       {/* Product Name (Hover) */}
       <div className="absolute bottom-8 left-8 z-20">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-black opacity-0 transition-all duration-700 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 font-medium">
+        <p className="t-micro text-olive-400 opacity-0 transition-all duration-700 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 font-medium">
           {name}
         </p>
       </div>

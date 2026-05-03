@@ -13,7 +13,7 @@ export const MobileApp = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <main ref={containerRef} className="relative min-h-screen bg-brand-white">
+    <main ref={containerRef} className="relative min-h-screen bg-bg-base">
       <SideNav />
 
       {/* Mobile Sections */}
@@ -27,7 +27,7 @@ export const MobileApp = () => {
 
       {/* Mobile Scroll Progress */}
       <motion.div
-        className="fixed bottom-0 left-0 h-1 w-full bg-brand-gold origin-left z-[60]"
+        className="fixed bottom-0 left-0 h-1 w-full bg-olive-400 origin-left z-[60]"
         style={{ scaleX: scrollYProgress }}
       />
     </main>

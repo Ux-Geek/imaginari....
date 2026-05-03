@@ -33,7 +33,7 @@ export function Cursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-8 w-8 rounded-full border border-brand-gold/30 bg-brand-gold/5 mix-blend-difference md:block"
+      className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-8 w-8 rounded-full border border-olive-400/30 bg-olive-400/5 mix-blend-difference md:block"
       style={{
         x: cursorX,
         y: cursorY,
@@ -41,7 +41,7 @@ export function Cursor() {
       }}
     >
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="h-1 w-1 rounded-full bg-brand-gold" />
+        <div className="h-1 w-1 rounded-full bg-olive-400" />
       </div>
     </motion.div>
   );

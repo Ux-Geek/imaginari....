@@ -72,12 +72,12 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-xl bg-white shadow-2xl overflow-hidden"
+            className="relative w-full max-w-xl bg-bg-elevated shadow-2xl overflow-hidden"
           >
             {/* Close Button */}
             <button 
               onClick={onClose}
-              className="absolute top-6 right-6 z-30 text-brand-green/40 hover:text-brand-green transition-colors"
+              className="absolute top-6 right-6 z-30 text-text-muted hover:text-text-primary transition-colors"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M18 6L6 18M6 6l12 12" />
@@ -86,15 +86,15 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
 
             <div className="p-8 md:p-12 space-y-8">
               <div className="text-center space-y-2">
-                <p className="text-[10px] tracking-[0.4em] uppercase text-brand-gold">Experience</p>
-                <h2 className="text-3xl font-serif">Virtual Try-On</h2>
+                <p className="section-eyebrow">Experience</p>
+                <h2 className="t-title-lg">Virtual Try-On</h2>
               </div>
 
               {/* IDLE / UPLOAD STATE */}
               {status === "idle" && (
                 <div className="space-y-8">
-                  <p className="text-center text-sm text-brand-green/60 font-light">
-                    Upload a front-facing full body photo to see how the <span className="text-brand-green font-medium">{product.name}</span> fits your silhouette.
+                  <p className="text-center text-sm text-text-muted font-light">
+                    Upload a front-facing full body photo to see how the <span className="text-olive-400 font-medium">{product.name}</span> fits your silhouette.
                   </p>
                   
                   <div className="relative group">
@@ -104,17 +104,17 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
                       onChange={handleImageUpload}
                       className="absolute inset-0 opacity-0 cursor-pointer z-10"
                     />
-                    <div className="aspect-[3/4] border border-dashed border-black/10 flex flex-col items-center justify-center space-y-4 group-hover:border-brand-gold transition-colors overflow-hidden">
+                    <div className="aspect-[3/4] border border-dashed border-border-medium flex flex-col items-center justify-center space-y-4 group-hover:border-olive-400 transition-colors overflow-hidden">
                       {frontImage ? (
                         <img src={frontImage} className="w-full h-full object-cover" alt="Preview" />
                       ) : (
                         <>
-                          <div className="w-12 h-12 rounded-full bg-brand-gold/5 flex items-center justify-center text-brand-gold">
+                          <div className="w-12 h-12 rounded-full bg-olive-400/5 flex items-center justify-center text-olive-400">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                               <path d="M12 4v16m8-8H4" />
                             </svg>
                           </div>
-                          <p className="text-[10px] tracking-[0.2em] uppercase text-brand-green/40">Select your photo</p>
+                          <p className="t-micro text-text-muted">Select your photo</p>
                         </>
                       )}
                     </div>
@@ -125,8 +125,8 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
                     onClick={startTryOn}
                     className={`w-full py-5 text-[11px] tracking-[0.5em] uppercase transition-all duration-500 ${
                       frontImage 
-                        ? "bg-brand-green text-white hover:bg-black" 
-                        : "bg-black/5 text-brand-green/20 cursor-not-allowed"
+                        ? "bg-olive-400 text-bg-base hover:bg-olive-300" 
+                        : "bg-white/5 text-text-dim cursor-not-allowed"
                     }`}
                   >
                     Generate Preview
@@ -141,16 +141,16 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
                     <motion.div 
                       animate={{ rotate: 360 }}
                       transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                      className="absolute inset-0 border-t border-brand-gold rounded-full"
+                      className="absolute inset-0 border-t border-olive-400 rounded-full"
                     />
-                    <div className="absolute inset-2 border border-brand-green/5 rounded-full" />
+                    <div className="absolute inset-2 border border-white/5 rounded-full" />
                   </div>
                   
                   <div className="text-center space-y-4">
-                    <p className="text-[11px] tracking-[0.3em] uppercase text-brand-gold animate-pulse">
+                    <p className="t-micro text-olive-400 animate-pulse">
                       {status === "uploading" ? "Uploading Canvas..." : "Mapping Silhouette..."}
                     </p>
-                    <p className="text-sm italic text-brand-green/40 font-serif max-w-[240px] mx-auto">
+                    <p className="t-editorial text-text-muted max-w-[240px] mx-auto">
                       "Distance changes your surroundings, but style remains your anchor."
                     </p>
                   </div>
@@ -163,24 +163,24 @@ export const TryOnModal = ({ isOpen, onClose, product }: TryOnModalProps) => {
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="aspect-[3/4.5] bg-white overflow-hidden shadow-inner flex items-center justify-center p-8"
+                    className="aspect-[3/4.5] bg-bg-base overflow-hidden shadow-inner flex items-center justify-center p-8"
                   >
                     {/* In a real app, this would be the AI generated result */}
-                    <img src={resultUrl} className="w-full h-full object-contain mix-blend-multiply" alt="Try-on Result" />
+                    <img src={resultUrl} className="w-full h-full object-contain" alt="Try-on Result" />
                   </motion.div>
 
                   <div className="flex gap-4">
-                    <button className="flex-1 py-5 border border-brand-green text-brand-green text-[11px] tracking-[0.5em] uppercase hover:bg-brand-green hover:text-white transition-all duration-500">
+                    <button className="flex-1 btn-ghost w-full">
                       Save Look
                     </button>
-                    <button className="flex-1 py-5 bg-brand-green text-white text-[11px] tracking-[0.5em] uppercase hover:bg-black transition-colors duration-500">
+                    <button className="flex-1 btn-primary w-full py-[13px]">
                       Add to Cart
                     </button>
                   </div>
 
                   <button 
                     onClick={() => setStatus("idle")}
-                    className="w-full text-center text-[10px] tracking-[0.2em] uppercase text-brand-green/40 hover:text-brand-green transition-colors"
+                    className="w-full text-center t-micro text-text-muted hover:text-olive-400 transition-colors mt-8"
                   >
                     Try Another Photo
                   </button>

@@ -33,7 +33,7 @@ export const SideNav = () => {
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className={`fixed top-0 left-0 right-0 z-[100] h-[64px] flex items-center px-6 md:px-10 transition-all duration-300 ${scrolled
-              ? "bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm"
+              ? "bg-bg-elevated/95 backdrop-blur-md border-b border-border-subtle shadow-sm"
               : "bg-transparent"
             }`}
         >
@@ -41,10 +41,9 @@ export const SideNav = () => {
           <Link
             to="/"
             aria-label="MAGINARI home"
-            className={`text-[11px] tracking-[0.45em] uppercase font-bold select-none transition-colors duration-300 ${scrolled ? "text-[#333333]" : "text-white"
-              }`}
+            className="font-display text-[22px] tracking-[0.08em] text-olive-400 select-none transition-colors duration-300"
           >
-            MAGINARI
+            MAGINARI.
           </Link>
 
           {/* ─── Spacer ─── */}
@@ -53,8 +52,8 @@ export const SideNav = () => {
           {/* ─── Search bar (desktop) ─── */}
           <div
             className={`hidden md:flex items-center gap-2 rounded-full px-4 py-1.5 mr-4 transition-all duration-300 ${scrolled
-                ? "bg-black/5 text-[#333333]"
-                : "bg-white/10 text-white"
+                ? "bg-white/5 text-text-primary border border-border-light"
+                : "bg-white/10 text-text-secondary border border-transparent"
               }`}
           >
             <svg className="w-3.5 h-3.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +71,7 @@ export const SideNav = () => {
             {/* Search icon (mobile) */}
             <button
               aria-label="Search"
-              className={`flex md:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+              className={`flex md:hidden items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-white/5 ${scrolled ? "text-text-primary" : "text-text-secondary"
                 }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +82,7 @@ export const SideNav = () => {
             {/* Favourites */}
             <button
               aria-label="Favourites"
-              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-white/5 ${scrolled ? "text-text-primary" : "text-text-secondary"
                 }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +93,7 @@ export const SideNav = () => {
             {/* Profile */}
             <button
               aria-label="Profile"
-              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-white/5 ${scrolled ? "text-text-primary" : "text-text-secondary"
                 }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,14 +104,14 @@ export const SideNav = () => {
             {/* Cart */}
             <button
               aria-label="Cart"
-              className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-black/5 ${scrolled ? "text-[#333333]" : "text-white"
+              className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:bg-white/5 ${scrolled ? "text-text-primary" : "text-text-secondary"
                 }`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
               {/* Cart badge */}
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-gold" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-olive-400" />
             </button>
           </div>
         </motion.nav>

@@ -12,18 +12,18 @@ const products = [
 
 export const IdentityMobile = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center px-0 text-center bg-white py-24">
+    <section className="relative flex flex-col items-center justify-center px-0 text-center bg-bg-elevated section py-24">
       <div className="relative w-full space-y-12 z-10">
         <div className="px-6 space-y-12">
-          <p className="text-[9px] tracking-[0.4em] uppercase text-brand-gold">Identity</p>
+          <p className="section-eyebrow text-olive-400">Identity</p>
           <div className="space-y-6">
             <WordReveal 
               text="distance changes your surroundings" 
-              className="text-2xl leading-relaxed justify-center"
+              className="font-display text-2xl tracking-wide text-text-primary justify-center"
             />
             <WordReveal 
               text="not your origin" 
-              className="text-2xl leading-relaxed justify-center"
+              className="font-display text-2xl tracking-wide text-text-primary justify-center"
             />
           </div>
           <motion.div
@@ -32,7 +32,7 @@ export const IdentityMobile = () => {
             transition={{ duration: 1 }}
             className="pt-6"
           >
-            <p className="mx-auto max-w-xs text-sm leading-relaxed text-brand-green/70">
+            <p className="mx-auto max-w-xs t-editorial text-text-muted text-sm">
               there is a place that exists in you without asking permission
             </p>
           </motion.div>
@@ -58,8 +58,8 @@ export const IdentityMobile = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="py-8"
             >
-              <p className="text-[10px] tracking-[0.2em] uppercase text-brand-gold mb-2">every city holds a version of you</p>
-              <p className="text-sm font-serif italic text-brand-green/60">rooted in the memory of where you began</p>
+              <p className="t-micro text-olive-400 mb-2">every city holds a version of you</p>
+              <p className="t-editorial text-text-muted text-sm">rooted in the memory of where you began</p>
             </motion.div>
 
             <motion.div
