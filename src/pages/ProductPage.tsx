@@ -1,10 +1,7 @@
 
-import React, { useState } from 'react';
-import { TryOnModal } from '../components/TryOnModal';
+import React from 'react';
 
 export const ProductPage = () => {
-  const [isTryOnOpen, setIsTryOnOpen] = useState(false);
-  const mockProduct = { name: "Retro Jersey — Vol. 1", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" };
   return (
     <div className="bg-bg-base min-h-screen text-text-secondary font-sans font-light overflow-x-hidden">
       
@@ -90,12 +87,6 @@ export const ProductPage = () => {
 
     <div className="cta-stack">
       <button className="btn-primary">Add to Cart</button>
-      <button 
-        className="btn-ghost" 
-        onClick={() => setIsTryOnOpen(true)}
-      >
-        Try it on
-      </button>
       <button className="btn-secondary">♡ &nbsp; Save to Wishlist</button>
     </div>
 
@@ -136,14 +127,23 @@ export const ProductPage = () => {
   </div>
 </div>
 
+<script>
+  document.querySelectorAll('.size-btn:not(.sold-out)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.product-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+</script>
 
 
-
-      <TryOnModal 
-        isOpen={isTryOnOpen} 
-        onClose={() => setIsTryOnOpen(false)} 
-        product={mockProduct} 
-      />
     </div>
   );
 };
