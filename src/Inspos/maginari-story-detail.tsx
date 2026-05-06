@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+import React from 'react';
+
+export function Maginaristorydetail() {
+  return (
+    <>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>MAGINARI — Favela: Born From The Hill</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+<style dangerouslySetInnerHTML={{ __html: `
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -683,7 +688,7 @@ nav {
   width: 13px; height: 13px;
   fill: none;
   stroke: rgba(181,169,106,0.45);
-  stroke-width: 1.5;
+  strokeWidth: 1.5;
 }
 
 /* Olive card body — exact from page 1 */
@@ -761,7 +766,7 @@ nav {
   width: 24px; height: 14px;
   stroke: var(--text-dim);
   fill: none;
-  stroke-width: 1.5;
+  strokeWidth: 1.5;
   transition: stroke 0.2s, transform 0.2s;
 }
 
@@ -792,27 +797,27 @@ footer {
 }
 
 .story-hero { animation: fadeUp 0.6s ease both; }
-</style>
+` }} />
 </head>
 <body>
 
-<!-- NAV -->
+{/*  NAV  */}
 <nav>
-  <a href="#" class="nav-logo">MAGINARI.</a>
-  <div class="nav-search">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" stroke-width="2">
+  <a href="#" className="nav-logo">MAGINARI.</a>
+  <div className="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" strokeWidth="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search" />
   </div>
-  <div class="nav-icons">
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <div className="nav-icons">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
       <line x1="3" y1="6" x2="21" y2="6"/>
       <path d="M16 10a4 4 0 0 1-8 0"/>
@@ -820,8 +825,8 @@ footer {
   </div>
 </nav>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
+{/*  BREADCRUMB  */}
+<div className="breadcrumb">
   <a href="#">MAGINARI</a>
   <span>/</span>
   <a href="#">Stories</a>
@@ -831,48 +836,48 @@ footer {
   Born From The Hill
 </div>
 
-<!-- STORY HERO -->
-<div class="story-hero">
-  <div class="hero-left">
-    <div class="hero-brand-tag">
-      <div class="hero-brand-dot"></div>
-      <span class="hero-brand-name">Favela — Rio de Janeiro</span>
+{/*  STORY HERO  */}
+<div className="story-hero">
+  <div className="hero-left">
+    <div className="hero-brand-tag">
+      <div className="hero-brand-dot"></div>
+      <span className="hero-brand-name">Favela — Rio de Janeiro</span>
     </div>
-    <h1 class="hero-title">Born From <strong>The Hill</strong></h1>
-    <p class="hero-excerpt">"We don't design clothes. We design evidence that we were here."</p>
-    <div class="hero-meta-row">
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Origin</div>
-        <div class="hero-meta-value">Rio de Janeiro, Brazil</div>
+    <h1 className="hero-title">Born From <strong>The Hill</strong></h1>
+    <p className="hero-excerpt">"We don't design clothes. We design evidence that we were here."</p>
+    <div className="hero-meta-row">
+      <div className="hero-meta-item">
+        <div className="hero-meta-label">Origin</div>
+        <div className="hero-meta-value">Rio de Janeiro, Brazil</div>
       </div>
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Studio</div>
-        <div class="hero-meta-value">Exclamation Studios</div>
+      <div className="hero-meta-item">
+        <div className="hero-meta-label">Studio</div>
+        <div className="hero-meta-value">Exclamation Studios</div>
       </div>
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Type</div>
-        <div class="hero-meta-value">Film + Editorial</div>
+      <div className="hero-meta-item">
+        <div className="hero-meta-label">Type</div>
+        <div className="hero-meta-value">Film + Editorial</div>
       </div>
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Duration</div>
-        <div class="hero-meta-value">8:24</div>
+      <div className="hero-meta-item">
+        <div className="hero-meta-label">Duration</div>
+        <div className="hero-meta-value">8:24</div>
       </div>
     </div>
   </div>
 
-  <!-- Feed card — exact from page 2 -->
-  <div class="hero-right">
-    <div class="hero-feed-card">
-      <div class="hero-feed-thumb">
-        <div class="hero-feed-badge">Exclamation Studios</div>
-        <span class="hero-feed-label">FAVELA</span>
+  {/*  Feed card — exact from page 2  */}
+  <div className="hero-right">
+    <div className="hero-feed-card">
+      <div className="hero-feed-thumb">
+        <div className="hero-feed-badge">Exclamation Studios</div>
+        <span className="hero-feed-label">FAVELA</span>
       </div>
-      <div class="hero-feed-brand">Favela</div>
-      <div class="hero-feed-product">Retro Jersey</div>
-      <div class="hero-feed-studio">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-circle">+</button>
-        <button class="btn-circle play">
+      <div className="hero-feed-brand">Favela</div>
+      <div className="hero-feed-product">Retro Jersey</div>
+      <div className="hero-feed-studio">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-circle">+</button>
+        <button className="btn-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
@@ -880,160 +885,160 @@ footer {
   </div>
 </div>
 
-<!-- SCROLL PLAY FRAME -->
-<div class="scroll-play-wrapper" id="play-wrapper">
-  <div class="scroll-play-sticky" id="play-sticky">
-    <div class="play-frame" id="play-frame" onclick="togglePlay()">
-      <div class="frame-lines"></div>
+{/*  SCROLL PLAY FRAME  */}
+<div className="scroll-play-wrapper" id="play-wrapper">
+  <div className="scroll-play-sticky" id="play-sticky">
+    <div className="play-frame" id="play-frame" onclick="togglePlay()">
+      <div className="frame-lines"></div>
 
-      <!-- Film strip left edge -->
-      <div class="frame-filmstrip" id="filmstrip">
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
-        <div class="filmstrip-hole"></div>
+      {/*  Film strip left edge  */}
+      <div className="frame-filmstrip" id="filmstrip">
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
+        <div className="filmstrip-hole"></div>
       </div>
 
-      <div class="frame-content">
-        <div class="frame-brand-ghost">FAVELA</div>
-        <button class="frame-play-btn" id="frame-play-btn">
+      <div className="frame-content">
+        <div className="frame-brand-ghost">FAVELA</div>
+        <button className="frame-play-btn" id="frame-play-btn">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
 
-      <div class="frame-info-bar">
-        <div class="frame-info-left">
-          <div class="frame-title">BORN FROM THE HILL</div>
-          <div class="frame-subtitle">Favela — Brand Film — 2025</div>
+      <div className="frame-info-bar">
+        <div className="frame-info-left">
+          <div className="frame-title">BORN FROM THE HILL</div>
+          <div className="frame-subtitle">Favela — Brand Film — 2025</div>
         </div>
-        <div class="frame-duration">8:24</div>
+        <div className="frame-duration">8:24</div>
       </div>
 
-      <div class="frame-progress">
-        <div class="frame-progress-fill" id="progress-fill"></div>
+      <div className="frame-progress">
+        <div className="frame-progress-fill" id="progress-fill"></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- STORY BODY -->
-<div class="story-body">
+{/*  STORY BODY  */}
+<div className="story-body">
 
-  <div class="story-sidebar">
-    <div class="sidebar-sticky">
-      <div class="sidebar-label">The Story</div>
-      <div class="sidebar-meta">
-        <div class="sidebar-meta-row">
-          <span class="sidebar-key">Brand</span>
-          <span class="sidebar-val">Favela</span>
+  <div className="story-sidebar">
+    <div className="sidebar-sticky">
+      <div className="sidebar-label">The Story</div>
+      <div className="sidebar-meta">
+        <div className="sidebar-meta-row">
+          <span className="sidebar-key">Brand</span>
+          <span className="sidebar-val">Favela</span>
         </div>
-        <div class="sidebar-meta-row">
-          <span class="sidebar-key">Origin</span>
-          <span class="sidebar-val">Rio de Janeiro</span>
+        <div className="sidebar-meta-row">
+          <span className="sidebar-key">Origin</span>
+          <span className="sidebar-val">Rio de Janeiro</span>
         </div>
-        <div class="sidebar-meta-row">
-          <span class="sidebar-key">Founded</span>
-          <span class="sidebar-val">2019</span>
+        <div className="sidebar-meta-row">
+          <span className="sidebar-key">Founded</span>
+          <span className="sidebar-val">2019</span>
         </div>
-        <div class="sidebar-meta-row">
-          <span class="sidebar-key">Drops</span>
-          <span class="sidebar-val">3 exclusive</span>
+        <div className="sidebar-meta-row">
+          <span className="sidebar-key">Drops</span>
+          <span className="sidebar-val">3 exclusive</span>
         </div>
-        <div class="sidebar-meta-row">
-          <span class="sidebar-key">Studio</span>
-          <span class="sidebar-val">Exclamation Studios</span>
+        <div className="sidebar-meta-row">
+          <span className="sidebar-key">Studio</span>
+          <span className="sidebar-val">Exclamation Studios</span>
         </div>
       </div>
 
-      <!-- Toggle from page 2 -->
-      <div class="toggle-row">
-        <button class="toggle-btn" onclick="switchTab(this)">Story</button>
-        <button class="toggle-btn active" onclick="switchTab(this)">Products</button>
+      {/*  Toggle from page 2  */}
+      <div className="toggle-row">
+        <button className="toggle-btn" onclick="switchTab(this)">Story</button>
+        <button className="toggle-btn active" onclick="switchTab(this)">Products</button>
       </div>
     </div>
   </div>
 
-  <div class="story-content">
+  <div className="story-content">
 
-    <p class="story-para">
+    <p className="story-para">
       Favela is not a reference. It is not aesthetic borrowed from the outside looking in. It is not the romanticisation of hardship, nor the commodification of a community that never asked to be a trend.
     </p>
 
-    <p class="story-para">
+    <p className="story-para">
       <em>It is the inside, made wearable.</em>
     </p>
 
-    <div class="pull-quote">
+    <div className="pull-quote">
       <p>"Every stitch is a street name. Every colour is a memory of someone who made the hill beautiful before beauty was fashionable."</p>
     </div>
 
-    <p class="story-para">
+    <p className="story-para">
       Founded in 2019 in the comunidades of Rio de Janeiro, Favela began as a document — a record of a neighbourhood that has always dressed with intention. The founders grew up watching people create extraordinary visual language from almost nothing. Shirts made from off-cuts. Jerseys modified in back rooms. Colour combinations that had no name in any fashion magazine but existed with complete authority on the streets of the hill.
     </p>
 
-    <!-- Inline image — card from page 1 -->
-    <div class="story-inline-img sii-1">
-      <span class="story-inline-label">RIO / 2019</span>
+    {/*  Inline image — card from page 1  */}
+    <div className="story-inline-img sii-1">
+      <span className="story-inline-label">RIO / 2019</span>
     </div>
-    <div class="story-caption">Comunidade, Rio de Janeiro — 2019</div>
+    <div className="story-caption">Comunidade, Rio de Janeiro — 2019</div>
 
-    <p class="story-para">
+    <p className="story-para">
       The Retro Jersey is the first piece. It is not nostalgic — it is archaeological. It goes back to recover something that was never properly documented and brings it forward into a form the world can finally see, hold, and wear.
     </p>
 
-    <p class="story-para">
+    <p className="story-para">
       <em>Fifty units. That is all.</em> Not because of artificial scarcity. Because the hill does not mass-produce. It makes things one at a time, with care, with context, with the weight of knowing that what you are making means something to someone who will never appear in a campaign but whose life is the reason the campaign exists at all.
     </p>
 
-    <div class="pull-quote">
+    <div className="pull-quote">
       <p>"We are not designing for the market. We are designing for the memory of everyone who wore this neighbourhood before it had a name anyone wanted to use."</p>
     </div>
 
-    <!-- Second inline image -->
-    <div class="story-inline-img sii-2">
-      <span class="story-inline-label">FAVELA / JERSEY</span>
+    {/*  Second inline image  */}
+    <div className="story-inline-img sii-2">
+      <span className="story-inline-label">FAVELA / JERSEY</span>
     </div>
-    <div class="story-caption">Retro Jersey Vol. 1 — Favela, 2025</div>
+    <div className="story-caption">Retro Jersey Vol. 1 — Favela, 2025</div>
 
-    <p class="story-para">
+    <p className="story-para">
       MAGINARI carries Favela because what they are doing is the definition of what this platform exists to make visible. Before the world catches up — this is the work. This is the story. This is the hill, made wearable.
     </p>
 
   </div>
 </div>
 
-<!-- CHEVRON DOWN — exact from page 2 -->
-<div class="chevron-down" onclick="window.scrollBy({top:400,behavior:'smooth'})">
+{/*  CHEVRON DOWN — exact from page 2  */}
+<div className="chevron-down" onclick="window.scrollBy({top:400,behavior:'smooth'})">
   <svg viewBox="0 0 24 14"><polyline points="2,2 12,12 22,2"/></svg>
 </div>
 
-<!-- RELATED PRODUCTS — card grid from page 1 -->
-<div class="related-section">
-  <div class="related-heading">From <strong>Favela</strong></div>
+{/*  RELATED PRODUCTS — card grid from page 1  */}
+<div className="related-section">
+  <div className="related-heading">From <strong>Favela</strong></div>
 
-  <div class="card-grid">
+  <div className="card-grid">
 
-    <div class="brand-card">
-      <div class="bc-img bc-1">
-        <div class="bc-badge">
+    <div className="brand-card">
+      <div className="bc-img bc-1">
+        <div className="bc-badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <span class="bc-img-label">JERSEY</span>
+        <span className="bc-img-label">JERSEY</span>
       </div>
-      <div class="bc-body">
-        <div class="bc-name">FAVELA</div>
-        <div class="bc-origin">Retro Jersey — Vol. 1</div>
-        <div class="bc-actions">
-          <span class="bc-price">₦ 48,000</span>
-          <div class="btn-sm-pair">
-            <button class="btn-sm">+</button>
-            <button class="btn-sm play">
+      <div className="bc-body">
+        <div className="bc-name">FAVELA</div>
+        <div className="bc-origin">Retro Jersey — Vol. 1</div>
+        <div className="bc-actions">
+          <span className="bc-price">₦ 48,000</span>
+          <div className="btn-sm-pair">
+            <button className="btn-sm">+</button>
+            <button className="btn-sm play">
               <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </button>
           </div>
@@ -1041,18 +1046,18 @@ footer {
       </div>
     </div>
 
-    <div class="brand-card">
-      <div class="bc-img bc-2">
-        <span class="bc-img-label">TEE</span>
+    <div className="brand-card">
+      <div className="bc-img bc-2">
+        <span className="bc-img-label">TEE</span>
       </div>
-      <div class="bc-body">
-        <div class="bc-name">FAVELA</div>
-        <div class="bc-origin">Culture Tee — Black</div>
-        <div class="bc-actions">
-          <span class="bc-price">₦ 28,000</span>
-          <div class="btn-sm-pair">
-            <button class="btn-sm">+</button>
-            <button class="btn-sm play">
+      <div className="bc-body">
+        <div className="bc-name">FAVELA</div>
+        <div className="bc-origin">Culture Tee — Black</div>
+        <div className="bc-actions">
+          <span className="bc-price">₦ 28,000</span>
+          <div className="btn-sm-pair">
+            <button className="btn-sm">+</button>
+            <button className="btn-sm play">
               <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </button>
           </div>
@@ -1060,18 +1065,18 @@ footer {
       </div>
     </div>
 
-    <div class="brand-card">
-      <div class="bc-img bc-3">
-        <span class="bc-img-label">CAP</span>
+    <div className="brand-card">
+      <div className="bc-img bc-3">
+        <span className="bc-img-label">CAP</span>
       </div>
-      <div class="bc-body">
-        <div class="bc-name">FAVELA</div>
-        <div class="bc-origin">Hill Cap — Limited</div>
-        <div class="bc-actions">
-          <span class="bc-price">₦ 18,000</span>
-          <div class="btn-sm-pair">
-            <button class="btn-sm">+</button>
-            <button class="btn-sm play">
+      <div className="bc-body">
+        <div className="bc-name">FAVELA</div>
+        <div className="bc-origin">Hill Cap — Limited</div>
+        <div className="bc-actions">
+          <span className="bc-price">₦ 18,000</span>
+          <div className="btn-sm-pair">
+            <button className="btn-sm">+</button>
+            <button className="btn-sm play">
               <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </button>
           </div>
@@ -1082,13 +1087,13 @@ footer {
   </div>
 </div>
 
-<!-- FOOTER -->
+{/*  FOOTER  */}
 <footer>
   <div>
-    <div class="footer-logo">MAGINARI.</div>
-    <div class="footer-sub">Exclamation Studios © 2025</div>
+    <div className="footer-logo">MAGINARI.</div>
+    <div className="footer-sub">Exclamation Studios © 2025</div>
   </div>
-  <div style="font-size:11px;color:var(--text-dim);letter-spacing:0.1em;text-align:right;">
+  <div data-style="font-size:11px;color:var(--text-dim);letter-spacing:0.1em;text-align:right;">
     Culture Envisioned.
   </div>
 </footer>
@@ -1136,11 +1141,11 @@ footer {
     isPlaying = !isPlaying;
 
     if (isPlaying) {
-      playBtn.innerHTML = `<svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#2a2a27;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>`;
+      playBtn.innerHTML = `<svg viewBox="0 0 24 24" data-style="width:22px;height:22px;fill:#2a2a27;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>`;
       playBtn.style.background = '#c4b870';
       startProgress();
     } else {
-      playBtn.innerHTML = `<svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#2a2a27;margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
+      playBtn.innerHTML = `<svg viewBox="0 0 24 24" data-style="width:22px;height:22px;fill:#2a2a27;margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
       playBtn.style.background = 'var(--olive)';
       stopProgress();
     }
@@ -1154,7 +1159,7 @@ footer {
         stopProgress();
         isPlaying = false;
         progressVal = 0;
-        playBtn.innerHTML = `<svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#2a2a27;margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
+        playBtn.innerHTML = `<svg viewBox="0 0 24 24" data-style="width:22px;height:22px;fill:#2a2a27;margin-left:4px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
         playBtn.style.background = 'var(--olive)';
       }
     }, 100);
@@ -1173,3 +1178,7 @@ footer {
 
 </body>
 </html>
+
+    </>
+  );
+}

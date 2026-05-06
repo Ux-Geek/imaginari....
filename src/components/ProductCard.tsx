@@ -34,13 +34,18 @@ export function ProductCard({ id, name, image }: ProductCardProps) {
         </svg>
       </div>
 
-      {/* Product Image - No BG style */}
-      <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+      {/* Product Image Container */}
+      <div className="absolute inset-0 flex items-end justify-center p-6 pb-[40%] z-0">
         <motion.img
           src={image}
           alt={name}
-          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+          className="w-full h-full max-h-[85%] object-contain origin-bottom transition-all duration-[600ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-y-8 group-hover:-rotate-[6deg]"
         />
+      </div>
+
+      {/* Folder SVG overlay */}
+      <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none">
+        <img src="/folder.svg" alt="folder cover" className="w-full h-auto translate-y-1 drop-shadow-xl" />
       </div>
 
       {/* Product Name (Hover) */}

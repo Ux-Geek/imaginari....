@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+import React from 'react';
+
+export function Maginariproductpage() {
+  return (
+    <>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>MAGINARI — Favela Retro Jersey</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+<style dangerouslySetInnerHTML={{ __html: `
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -495,34 +500,34 @@
   .product-brand-name { animation: fadeUp 0.6s ease forwards; }
   .product-name { animation: fadeUp 0.6s ease 0.1s both; }
   .product-price { animation: fadeUp 0.6s ease 0.15s both; }
-</style>
+` }} />
 </head>
 <body>
 
-<!-- NAV -->
+{/*  NAV  */}
 <nav>
-  <a href="#" class="nav-logo">MAGINARI.</a>
-  <div class="nav-search">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6440" stroke-width="2">
+  <a href="#" className="nav-logo">MAGINARI.</a>
+  <div className="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6440" strokeWidth="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search" />
   </div>
-  <div class="nav-icons">
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <div className="nav-icons">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
     </svg>
   </div>
 </nav>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
+{/*  BREADCRUMB  */}
+<div className="breadcrumb">
   <a href="#">MAGINARI</a>
   <span>/</span>
   <a href="#">Favela</a>
@@ -530,90 +535,90 @@
   Retro Jersey
 </div>
 
-<!-- PRODUCT LAYOUT -->
-<div class="product-layout">
+{/*  PRODUCT LAYOUT  */}
+<div className="product-layout">
 
-  <!-- LEFT — VISUAL -->
-  <div class="product-visual">
-    <div class="product-main-img">
-      <div class="img-bg"></div>
-      <div class="img-content">
-        <span class="img-label">FAVELA</span>
-        <span class="img-sublabel">Retro Jersey — Vol. 1</span>
+  {/*  LEFT — VISUAL  */}
+  <div className="product-visual">
+    <div className="product-main-img">
+      <div className="img-bg"></div>
+      <div className="img-content">
+        <span className="img-label">FAVELA</span>
+        <span className="img-sublabel">Retro Jersey — Vol. 1</span>
       </div>
-      <button class="play-overlay">
+      <button className="play-overlay">
         <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       </button>
     </div>
-    <div class="product-thumbs">
-      <div class="product-thumb active">
-        <div class="thumb-bg t1">FRONT</div>
+    <div className="product-thumbs">
+      <div className="product-thumb active">
+        <div className="thumb-bg t1">FRONT</div>
       </div>
-      <div class="product-thumb">
-        <div class="thumb-bg t2">BACK</div>
+      <div className="product-thumb">
+        <div className="thumb-bg t2">BACK</div>
       </div>
-      <div class="product-thumb">
-        <div class="thumb-bg t3">DETAIL</div>
+      <div className="product-thumb">
+        <div className="thumb-bg t3">DETAIL</div>
       </div>
-      <div class="product-thumb">
-        <div class="thumb-bg t4">WORN</div>
+      <div className="product-thumb">
+        <div className="thumb-bg t4">WORN</div>
       </div>
     </div>
   </div>
 
-  <!-- RIGHT — DETAILS -->
-  <div class="product-details">
-    <div class="product-studio">Exclamation Studios — Favela</div>
-    <div class="product-brand-name">FAVELA</div>
-    <div class="product-name">Retro Jersey — Vol. 1</div>
-    <div class="product-price">₦ 48,000 <span>Exclusive Edition</span></div>
+  {/*  RIGHT — DETAILS  */}
+  <div className="product-details">
+    <div className="product-studio">Exclamation Studios — Favela</div>
+    <div className="product-brand-name">FAVELA</div>
+    <div className="product-name">Retro Jersey — Vol. 1</div>
+    <div className="product-price">₦ 48,000 <span>Exclusive Edition</span></div>
 
-    <div class="size-label">Select Size</div>
-    <div class="size-grid">
-      <button class="size-btn sold-out">XS</button>
-      <button class="size-btn">S</button>
-      <button class="size-btn active">M</button>
-      <button class="size-btn">L</button>
-      <button class="size-btn">XL</button>
-      <button class="size-btn sold-out">XXL</button>
+    <div className="size-label">Select Size</div>
+    <div className="size-grid">
+      <button className="size-btn sold-out">XS</button>
+      <button className="size-btn">S</button>
+      <button className="size-btn active">M</button>
+      <button className="size-btn">L</button>
+      <button className="size-btn">XL</button>
+      <button className="size-btn sold-out">XXL</button>
     </div>
 
-    <div class="cta-stack">
-      <button class="btn-primary">Add to Cart</button>
-      <button class="btn-secondary">♡ &nbsp; Save to Wishlist</button>
+    <div className="cta-stack">
+      <button className="btn-primary">Add to Cart</button>
+      <button className="btn-secondary">♡ &nbsp; Save to Wishlist</button>
     </div>
 
-    <div class="divider"></div>
+    <div className="divider"></div>
 
-    <div class="story-excerpt">
-      <div class="story-excerpt-label">The Story Behind This Piece</div>
+    <div className="story-excerpt">
+      <div className="story-excerpt-label">The Story Behind This Piece</div>
       <blockquote>"We don't design clothes. We design evidence that we were here."</blockquote>
       <p>The Retro Jersey is not nostalgia. It is a document. Every stitch a street name, every colour a memory of someone who made the hill beautiful before beauty was fashionable.</p>
-      <a class="story-link">Read the full story</a>
+      <a className="story-link">Read the full story</a>
     </div>
 
-    <div class="divider"></div>
+    <div className="divider"></div>
 
-    <div class="product-meta">
-      <div class="meta-row">
-        <span class="meta-key">Origin</span>
-        <span class="meta-val">Rio de Janeiro, Brazil</span>
+    <div className="product-meta">
+      <div className="meta-row">
+        <span className="meta-key">Origin</span>
+        <span className="meta-val">Rio de Janeiro, Brazil</span>
       </div>
-      <div class="meta-row">
-        <span class="meta-key">Material</span>
-        <span class="meta-val">100% Cotton — Heavyweight</span>
+      <div className="meta-row">
+        <span className="meta-key">Material</span>
+        <span className="meta-val">100% Cotton — Heavyweight</span>
       </div>
-      <div class="meta-row">
-        <span class="meta-key">Edition</span>
-        <span class="meta-val">Limited — 50 units</span>
+      <div className="meta-row">
+        <span className="meta-key">Edition</span>
+        <span className="meta-val">Limited — 50 units</span>
       </div>
-      <div class="meta-row">
-        <span class="meta-key">Ships</span>
-        <span class="meta-val">Worldwide — 7–14 days</span>
+      <div className="meta-row">
+        <span className="meta-key">Ships</span>
+        <span className="meta-val">Worldwide — 7–14 days</span>
       </div>
-      <div class="meta-row">
-        <span class="meta-key">Studio</span>
-        <span class="meta-val">Exclamation Studios</span>
+      <div className="meta-row">
+        <span className="meta-key">Studio</span>
+        <span className="meta-val">Exclamation Studios</span>
       </div>
     </div>
 
@@ -638,3 +643,7 @@
 
 </body>
 </html>
+
+    </>
+  );
+}

@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+import React from 'react';
+
+export function Maginaribranddirectory() {
+  return (
+    <>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>MAGINARI — All Brands</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+<style dangerouslySetInnerHTML={{ __html: `
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -276,7 +281,7 @@ nav {
   width: 14px; height: 14px;
   fill: none;
   stroke: rgba(181,169,106,0.5);
-  stroke-width: 1.5;
+  strokeWidth: 1.5;
 }
 
 /* Dashed border — coming soon, exact from page 1 */
@@ -503,7 +508,7 @@ nav {
   width: 24px; height: 14px;
   stroke: var(--text-dim);
   fill: none;
-  stroke-width: 1.5;
+  strokeWidth: 1.5;
   transition: stroke 0.2s, transform 0.2s;
 }
 
@@ -544,88 +549,88 @@ footer {
 .page-intro  { animation: fadeUp 0.5s ease both; }
 .filter-bar  { animation: fadeUp 0.5s ease 0.1s both; }
 .card-grid   { animation: fadeUp 0.6s ease 0.15s both; }
-</style>
+` }} />
 </head>
 <body>
 
-<!-- NAV — exact from uploads -->
+{/*  NAV — exact from uploads  */}
 <nav>
-  <a href="#" class="nav-logo">MAGINARI.</a>
-  <div class="nav-search">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" stroke-width="2">
+  <a href="#" className="nav-logo">MAGINARI.</a>
+  <div className="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" strokeWidth="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search" />
   </div>
-  <div class="nav-icons">
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <div className="nav-icons">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
     </svg>
-    <div style="position:relative;">
-      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <div data-style="position:relative;">
+      <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
         <line x1="3" y1="6" x2="21" y2="6"/>
         <path d="M16 10a4 4 0 0 1-8 0"/>
       </svg>
-      <div class="nav-icon-dot"></div>
+      <div className="nav-icon-dot"></div>
     </div>
   </div>
 </nav>
 
-<!-- PAGE INTRO — page 2 heading style -->
-<div class="page-intro">
-  <div class="page-heading">The <strong>Brands</strong></div>
-  <div class="page-subheading">Culturally-driven fashion from the diaspora — curated by MAGINARI</div>
+{/*  PAGE INTRO — page 2 heading style  */}
+<div className="page-intro">
+  <div className="page-heading">The <strong>Brands</strong></div>
+  <div className="page-subheading">Culturally-driven fashion from the diaspora — curated by MAGINARI</div>
 
-  <!-- Toggle — exact from page 2 -->
-  <div class="toggle-row">
-    <button class="toggle-btn active" id="btn-grid" onclick="switchView('grid', this)">Story</button>
-    <button class="toggle-btn" id="btn-feed" onclick="switchView('feed', this)">Products</button>
+  {/*  Toggle — exact from page 2  */}
+  <div className="toggle-row">
+    <button className="toggle-btn active" id="btn-grid" onclick="switchView('grid', this)">Story</button>
+    <button className="toggle-btn" id="btn-feed" onclick="switchView('feed', this)">Products</button>
   </div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-  <div class="filter-left">
-    <span class="filter-label">Region</span>
-    <button class="filter-pill active">All</button>
-    <button class="filter-pill">West Africa</button>
-    <button class="filter-pill">Latin America</button>
-    <button class="filter-pill">East Africa</button>
-    <button class="filter-pill">Diaspora UK</button>
+{/*  FILTER BAR  */}
+<div className="filter-bar">
+  <div className="filter-left">
+    <span className="filter-label">Region</span>
+    <button className="filter-pill active">All</button>
+    <button className="filter-pill">West Africa</button>
+    <button className="filter-pill">Latin America</button>
+    <button className="filter-pill">East Africa</button>
+    <button className="filter-pill">Diaspora UK</button>
   </div>
-  <span class="filter-count">5 brands — 2 coming soon</span>
+  <span className="filter-count">5 brands — 2 coming soon</span>
 </div>
 
-<!-- SECTION LABEL — "This month" style from page 2 -->
-<div class="section-label">Featured</div>
+{/*  SECTION LABEL — "This month" style from page 2  */}
+<div className="section-label">Featured</div>
 
-<!-- CARD GRID — exact from page 1 -->
-<div class="card-grid" id="grid-view">
+{/*  CARD GRID — exact from page 1  */}
+<div className="card-grid" id="grid-view">
 
-  <!-- FAVELA -->
-  <div class="brand-card">
-    <div class="bc-img-wrap">
-      <div class="bc-img-inner bg-favela">
-        <div class="bc-product-visual">
-          <span class="bc-product-name">FAVELA</span>
+  {/*  FAVELA  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap">
+      <div className="bc-img-inner bg-favela">
+        <div className="bc-product-visual">
+          <span className="bc-product-name">FAVELA</span>
         </div>
       </div>
-      <div class="bc-studio-badge">
+      <div className="bc-studio-badge">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
       </div>
     </div>
-    <div class="bc-body">
-      <div class="bc-brand-name">FAVELA</div>
-      <div class="bc-origin">Rio de Janeiro, Brazil</div>
-      <div class="bc-actions">
-        <span class="bc-story-count">3 drops · 2 stories</span>
-        <div style="display:flex;gap:8px;">
-          <button class="btn-sm-circle">+</button>
-          <button class="btn-sm-circle play">
+    <div className="bc-body">
+      <div className="bc-brand-name">FAVELA</div>
+      <div className="bc-origin">Rio de Janeiro, Brazil</div>
+      <div className="bc-actions">
+        <span className="bc-story-count">3 drops · 2 stories</span>
+        <div data-style="display:flex;gap:8px;">
+          <button className="btn-sm-circle">+</button>
+          <button className="btn-sm-circle play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </button>
         </div>
@@ -633,26 +638,26 @@ footer {
     </div>
   </div>
 
-  <!-- COCI -->
-  <div class="brand-card">
-    <div class="bc-img-wrap">
-      <div class="bc-img-inner bg-coci">
-        <div class="bc-studio-badge" style="right:10px;top:10px;">
-          <svg viewBox="0 0 24 24" style="stroke:rgba(100,90,50,0.5);"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+  {/*  COCI  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap">
+      <div className="bc-img-inner bg-coci">
+        <div className="bc-studio-badge" data-style="right:10px;top:10px;">
+          <svg viewBox="0 0 24 24" data-style="stroke:rgba(100,90,50,0.5);"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <div class="bc-product-visual">
-          <span class="bc-product-name" style="color:rgba(100,90,40,0.18);">COCI</span>
+        <div className="bc-product-visual">
+          <span className="bc-product-name" data-style="color:rgba(100,90,40,0.18);">COCI</span>
         </div>
       </div>
     </div>
-    <div class="bc-body">
-      <div class="bc-brand-name coci-style">COCi</div>
-      <div class="bc-origin">Lagos, Nigeria</div>
-      <div class="bc-actions">
-        <span class="bc-story-count">2 drops · 3 stories</span>
-        <div style="display:flex;gap:8px;">
-          <button class="btn-sm-circle">+</button>
-          <button class="btn-sm-circle play">
+    <div className="bc-body">
+      <div className="bc-brand-name coci-style">COCi</div>
+      <div className="bc-origin">Lagos, Nigeria</div>
+      <div className="bc-actions">
+        <span className="bc-story-count">2 drops · 3 stories</span>
+        <div data-style="display:flex;gap:8px;">
+          <button className="btn-sm-circle">+</button>
+          <button className="btn-sm-circle play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </button>
         </div>
@@ -660,23 +665,23 @@ footer {
     </div>
   </div>
 
-  <!-- ICONS -->
-  <div class="brand-card">
-    <div class="bc-img-wrap">
-      <div class="bc-img-inner bg-icons">
-        <div class="bc-product-visual">
-          <span class="bc-product-name">ICONS</span>
+  {/*  ICONS  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap">
+      <div className="bc-img-inner bg-icons">
+        <div className="bc-product-visual">
+          <span className="bc-product-name">ICONS</span>
         </div>
       </div>
     </div>
-    <div class="bc-body">
-      <div class="bc-brand-name">ICONS</div>
-      <div class="bc-origin">Accra, Ghana</div>
-      <div class="bc-actions">
-        <span class="bc-story-count">1 drop · 1 story</span>
-        <div style="display:flex;gap:8px;">
-          <button class="btn-sm-circle">+</button>
-          <button class="btn-sm-circle play">
+    <div className="bc-body">
+      <div className="bc-brand-name">ICONS</div>
+      <div className="bc-origin">Accra, Ghana</div>
+      <div className="bc-actions">
+        <span className="bc-story-count">1 drop · 1 story</span>
+        <div data-style="display:flex;gap:8px;">
+          <button className="btn-sm-circle">+</button>
+          <button className="btn-sm-circle play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </button>
         </div>
@@ -686,28 +691,28 @@ footer {
 
 </div>
 
-<!-- SECOND ROW SECTION LABEL -->
-<div class="section-label">This season</div>
+{/*  SECOND ROW SECTION LABEL  */}
+<div className="section-label">This season</div>
 
-<div class="card-grid" style="padding-bottom:48px;">
+<div className="card-grid" data-style="padding-bottom:48px;">
 
-  <!-- SURULERE -->
-  <div class="brand-card">
-    <div class="bc-img-wrap">
-      <div class="bc-img-inner bg-sure">
-        <div class="bc-product-visual">
-          <span class="bc-product-name">SURULERE</span>
+  {/*  SURULERE  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap">
+      <div className="bc-img-inner bg-sure">
+        <div className="bc-product-visual">
+          <span className="bc-product-name">SURULERE</span>
         </div>
       </div>
     </div>
-    <div class="bc-body">
-      <div class="bc-brand-name">SURULERE</div>
-      <div class="bc-origin">Lagos, Nigeria</div>
-      <div class="bc-actions">
-        <span class="bc-story-count">2 drops · 1 story</span>
-        <div style="display:flex;gap:8px;">
-          <button class="btn-sm-circle">+</button>
-          <button class="btn-sm-circle play">
+    <div className="bc-body">
+      <div className="bc-brand-name">SURULERE</div>
+      <div className="bc-origin">Lagos, Nigeria</div>
+      <div className="bc-actions">
+        <span className="bc-story-count">2 drops · 1 story</span>
+        <div data-style="display:flex;gap:8px;">
+          <button className="btn-sm-circle">+</button>
+          <button className="btn-sm-circle play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </button>
         </div>
@@ -715,23 +720,23 @@ footer {
     </div>
   </div>
 
-  <!-- ACCRA COLLECTIVE -->
-  <div class="brand-card">
-    <div class="bc-img-wrap">
-      <div class="bc-img-inner bg-accra">
-        <div class="bc-product-visual">
-          <span class="bc-product-name">ACCRA</span>
+  {/*  ACCRA COLLECTIVE  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap">
+      <div className="bc-img-inner bg-accra">
+        <div className="bc-product-visual">
+          <span className="bc-product-name">ACCRA</span>
         </div>
       </div>
     </div>
-    <div class="bc-body">
-      <div class="bc-brand-name">ACCRA CO.</div>
-      <div class="bc-origin">Accra, Ghana</div>
-      <div class="bc-actions">
-        <span class="bc-story-count">1 drop · 2 stories</span>
-        <div style="display:flex;gap:8px;">
-          <button class="btn-sm-circle">+</button>
-          <button class="btn-sm-circle play">
+    <div className="bc-body">
+      <div className="bc-brand-name">ACCRA CO.</div>
+      <div className="bc-origin">Accra, Ghana</div>
+      <div className="bc-actions">
+        <span className="bc-story-count">1 drop · 2 stories</span>
+        <div data-style="display:flex;gap:8px;">
+          <button className="btn-sm-circle">+</button>
+          <button className="btn-sm-circle play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </button>
         </div>
@@ -739,108 +744,108 @@ footer {
     </div>
   </div>
 
-  <!-- COMING SOON — dashed border exact from page 1 -->
-  <div class="brand-card">
-    <div class="bc-img-wrap" style="opacity:0.4;">
-      <div class="bc-img-inner bg-coming">
-        <div class="bc-dashes" style="position:absolute;inset:8px;border:1.5px dashed rgba(181,169,106,0.2);border-radius:6px;pointer-events:none;"></div>
-        <div class="bc-product-visual">
-          <span class="bc-product-name" style="opacity:0.3;">—</span>
+  {/*  COMING SOON — dashed border exact from page 1  */}
+  <div className="brand-card">
+    <div className="bc-img-wrap" data-style="opacity:0.4;">
+      <div className="bc-img-inner bg-coming">
+        <div className="bc-dashes" data-style="position:absolute;inset:8px;border:1.5px dashed rgba(181,169,106,0.2);border-radius:6px;pointer-events:none;"></div>
+        <div className="bc-product-visual">
+          <span className="bc-product-name" data-style="opacity:0.3;">—</span>
         </div>
       </div>
     </div>
-    <div class="bc-body coming">
-      <div class="bc-brand-name">COMING</div>
-      <div class="bc-origin">Unrevealed</div>
+    <div className="bc-body coming">
+      <div className="bc-brand-name">COMING</div>
+      <div className="bc-origin">Unrevealed</div>
     </div>
   </div>
 
 </div>
 
-<!-- FEED VIEW — page 2 exact layout (hidden by default) -->
-<div class="feed-view" id="feed-view">
+{/*  FEED VIEW — page 2 exact layout (hidden by default)  */}
+<div className="feed-view" id="feed-view">
 
-  <div class="feed-item">
-    <div class="feed-thumb ft-favela">
-      <span class="ft-label">FAVEL</span>
+  <div className="feed-item">
+    <div className="feed-thumb ft-favela">
+      <span className="ft-label">FAVEL</span>
     </div>
-    <div class="feed-info">
-      <div class="feed-brand-name">Favela</div>
-      <div class="feed-product-name">Retro Jersey</div>
-      <div class="feed-studio-name">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-feed-circle">+</button>
-        <button class="btn-feed-circle play">
+    <div className="feed-info">
+      <div className="feed-brand-name">Favela</div>
+      <div className="feed-product-name">Retro Jersey</div>
+      <div className="feed-studio-name">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-feed-circle">+</button>
+        <button className="btn-feed-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
     </div>
   </div>
 
-  <div class="feed-item">
-    <div class="feed-thumb ft-coci">
-      <span class="ft-label dark">COCI</span>
+  <div className="feed-item">
+    <div className="feed-thumb ft-coci">
+      <span className="ft-label dark">COCI</span>
     </div>
-    <div class="feed-info">
-      <div class="feed-brand-name">Coci</div>
-      <div class="feed-product-name">Lagos Sweatshirt</div>
-      <div class="feed-studio-name">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-feed-circle">+</button>
-        <button class="btn-feed-circle play">
+    <div className="feed-info">
+      <div className="feed-brand-name">Coci</div>
+      <div className="feed-product-name">Lagos Sweatshirt</div>
+      <div className="feed-studio-name">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-feed-circle">+</button>
+        <button className="btn-feed-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
     </div>
   </div>
 
-  <div class="feed-item">
-    <div class="feed-thumb ft-icons">
-      <span class="ft-label">ICONS</span>
+  <div className="feed-item">
+    <div className="feed-thumb ft-icons">
+      <span className="ft-label">ICONS</span>
     </div>
-    <div class="feed-info">
-      <div class="feed-brand-name">Icons</div>
-      <div class="feed-product-name">Retro Jersey</div>
-      <div class="feed-studio-name">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-feed-circle">+</button>
-        <button class="btn-feed-circle play">
+    <div className="feed-info">
+      <div className="feed-brand-name">Icons</div>
+      <div className="feed-product-name">Retro Jersey</div>
+      <div className="feed-studio-name">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-feed-circle">+</button>
+        <button className="btn-feed-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
     </div>
   </div>
 
-  <div style="padding: 32px 0 12px; font-size: clamp(22px, 3vw, 32px); font-weight: 300; color: var(--text-primary); letter-spacing: -0.01em;">This season</div>
+  <div data-style="padding: 32px 0 12px; font-size: clamp(22px, 3vw, 32px); font-weight: 300; color: var(--text-primary); letter-spacing: -0.01em;">This season</div>
 
-  <div class="feed-item">
-    <div class="feed-thumb ft-sure">
-      <span class="ft-label">SURE</span>
+  <div className="feed-item">
+    <div className="feed-thumb ft-sure">
+      <span className="ft-label">SURE</span>
     </div>
-    <div class="feed-info">
-      <div class="feed-brand-name">Surulere</div>
-      <div class="feed-product-name">Street Tee Vol. 2</div>
-      <div class="feed-studio-name">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-feed-circle">+</button>
-        <button class="btn-feed-circle play">
+    <div className="feed-info">
+      <div className="feed-brand-name">Surulere</div>
+      <div className="feed-product-name">Street Tee Vol. 2</div>
+      <div className="feed-studio-name">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-feed-circle">+</button>
+        <button className="btn-feed-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
     </div>
   </div>
 
-  <div class="feed-item">
-    <div class="feed-thumb ft-accra">
-      <span class="ft-label">ACCRA</span>
+  <div className="feed-item">
+    <div className="feed-thumb ft-accra">
+      <span className="ft-label">ACCRA</span>
     </div>
-    <div class="feed-info">
-      <div class="feed-brand-name">Accra Co.</div>
-      <div class="feed-product-name">Heritage Cap</div>
-      <div class="feed-studio-name">Exclamation Studios</div>
-      <div class="feed-action-row">
-        <button class="btn-feed-circle">+</button>
-        <button class="btn-feed-circle play">
+    <div className="feed-info">
+      <div className="feed-brand-name">Accra Co.</div>
+      <div className="feed-product-name">Heritage Cap</div>
+      <div className="feed-studio-name">Exclamation Studios</div>
+      <div className="feed-action-row">
+        <button className="btn-feed-circle">+</button>
+        <button className="btn-feed-circle play">
           <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
@@ -849,20 +854,20 @@ footer {
 
 </div>
 
-<!-- CHEVRON DOWN — exact from page 2 -->
-<div class="chevron-down" id="chevron">
+{/*  CHEVRON DOWN — exact from page 2  */}
+<div className="chevron-down" id="chevron">
   <svg viewBox="0 0 24 14" xmlns="http://www.w3.org/2000/svg">
     <polyline points="2,2 12,12 22,2"/>
   </svg>
 </div>
 
-<!-- FOOTER -->
+{/*  FOOTER  */}
 <footer>
   <div>
-    <div class="footer-logo">MAGINARI.</div>
-    <div class="footer-sub">Exclamation Studios © 2025</div>
+    <div className="footer-logo">MAGINARI.</div>
+    <div className="footer-sub">Exclamation Studios © 2025</div>
   </div>
-  <div style="font-size:11px;color:var(--text-dim);letter-spacing:0.1em;text-align:right;">
+  <div data-style="font-size:11px;color:var(--text-dim);letter-spacing:0.1em;text-align:right;">
     Culture Envisioned.
   </div>
 </footer>
@@ -905,3 +910,7 @@ footer {
 
 </body>
 </html>
+
+    </>
+  );
+}

@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+import React from 'react';
+
+export function Maginarihomepage() {
+  return (
+    <>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>MAGINARI — Culture Envisioned</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
+<style dangerouslySetInnerHTML={{ __html: `
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -710,27 +715,27 @@ footer {
   0%, 100% { opacity: 0.4; transform: scaleY(1); }
   50% { opacity: 1; transform: scaleY(1.15); }
 }
-</style>
+` }} />
 </head>
 <body>
 
-<!-- NAV -->
+{/*  NAV  */}
 <nav id="main-nav">
-  <a href="#" class="nav-logo">MAGINARI.</a>
-  <div class="nav-search">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" stroke-width="2">
+  <a href="#" className="nav-logo">MAGINARI.</a>
+  <div className="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a5850" strokeWidth="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search" />
   </div>
-  <div class="nav-icons">
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <div className="nav-icons">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
     </svg>
-    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
       <line x1="3" y1="6" x2="21" y2="6"/>
       <path d="M16 10a4 4 0 0 1-8 0"/>
@@ -738,117 +743,117 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-filmstrip"></div>
+{/*  HERO  */}
+<section className="hero">
+  <div className="hero-bg"></div>
+  <div className="hero-grain"></div>
+  <div className="hero-filmstrip"></div>
 
-  <!-- Atmospheric city labels -->
-  <div class="hero-city-labels">
-    <span class="city-label" style="top:12%;left:8%;font-size:80px;">LAGOS</span>
-    <span class="city-label" style="top:30%;right:15%;font-size:60px;">RIO</span>
-    <span class="city-label" style="top:55%;left:20%;font-size:48px;">ACCRA</span>
-    <span class="city-label" style="bottom:25%;right:25%;font-size:36px;">SURULERE</span>
+  {/*  Atmospheric city labels  */}
+  <div className="hero-city-labels">
+    <span className="city-label" data-style="top:12%;left:8%;font-size:80px;">LAGOS</span>
+    <span className="city-label" data-style="top:30%;right:15%;font-size:60px;">RIO</span>
+    <span className="city-label" data-style="top:55%;left:20%;font-size:48px;">ACCRA</span>
+    <span className="city-label" data-style="bottom:25%;right:25%;font-size:36px;">SURULERE</span>
   </div>
 
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-line"></span>
+  <div className="hero-content">
+    <div className="hero-left">
+      <div className="hero-eyebrow">
+        <span className="hero-eyebrow-line"></span>
         Cultural Discovery Platform
       </div>
-      <h1 class="hero-headline">THE<br>MAGI<br><em>SAW IT</em><br>FIRST.</h1>
-      <p class="hero-sub">Where diaspora fashion finds its global voice. Story before product. Culture before commerce.</p>
-      <div class="hero-cta-row">
-        <button class="btn-primary">Explore Drops</button>
-        <a class="btn-ghost-link">How it works</a>
+      <h1 className="hero-headline">THE<br />MAGI<br /><em>SAW IT</em><br />FIRST.</h1>
+      <p className="hero-sub">Where diaspora fashion finds its global voice. Story before product. Culture before commerce.</p>
+      <div className="hero-cta-row">
+        <button className="btn-primary">Explore Drops</button>
+        <a className="btn-ghost-link">How it works</a>
       </div>
     </div>
 
-    <div class="hero-right">
-      <div class="hero-drop-card">
-        <div class="hero-drop-img">
-          <div class="hero-drop-new">New Drop</div>
-          <span class="hero-drop-img-label">FAVELA</span>
+    <div className="hero-right">
+      <div className="hero-drop-card">
+        <div className="hero-drop-img">
+          <div className="hero-drop-new">New Drop</div>
+          <span className="hero-drop-img-label">FAVELA</span>
         </div>
-        <div class="hero-drop-body">
-          <div class="hero-drop-brand">FAVELA</div>
-          <div class="hero-drop-name">Retro Jersey — Vol. 1</div>
+        <div className="hero-drop-body">
+          <div className="hero-drop-brand">FAVELA</div>
+          <div className="hero-drop-name">Retro Jersey — Vol. 1</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="scroll-indicator">
-    <div class="scroll-indicator-line"></div>
-    <span class="scroll-indicator-text">Scroll</span>
+  <div className="scroll-indicator">
+    <div className="scroll-indicator-line"></div>
+    <span className="scroll-indicator-text">Scroll</span>
   </div>
 </section>
 
-<!-- WHAT'S NEW -->
-<section class="whats-new">
-  <div class="section-header">
-    <div class="section-header-left">
-      <div class="section-eyebrow">Latest Releases</div>
-      <div class="section-title">What's <span class="section-title-accent">New</span></div>
-      <div class="section-sub">The latest releases from fashion brands in diaspora</div>
+{/*  WHAT'S NEW  */}
+<section className="whats-new">
+  <div className="section-header">
+    <div className="section-header-left">
+      <div className="section-eyebrow">Latest Releases</div>
+      <div className="section-title">What's <span className="section-title-accent">New</span></div>
+      <div className="section-sub">The latest releases from fashion brands in diaspora</div>
     </div>
-    <a class="section-link">View all</a>
+    <a className="section-link">View all</a>
   </div>
 
-  <div class="toggle-group">
-    <button class="toggle-btn" onclick="switchFeedTab('story',this)">Story</button>
-    <button class="toggle-btn active" onclick="switchFeedTab('products',this)">Products</button>
+  <div className="toggle-group">
+    <button className="toggle-btn" onclick="switchFeedTab('story',this)">Story</button>
+    <button className="toggle-btn active" onclick="switchFeedTab('products',this)">Products</button>
   </div>
 
-  <div class="feed-list" id="feed-content">
+  <div className="feed-list" id="feed-content">
 
-    <div class="feed-item">
-      <div class="feed-thumb ft-favela">
-        <span class="feed-thumb-text">FAVEL</span>
+    <div className="feed-item">
+      <div className="feed-thumb ft-favela">
+        <span className="feed-thumb-text">FAVEL</span>
       </div>
-      <div class="feed-info">
-        <div class="feed-brand">Favela</div>
-        <div class="feed-product">Retro Jersey</div>
-        <div class="feed-studio">Exclamation Studios</div>
-        <div class="feed-actions">
-          <div class="btn-circle">+</div>
-          <div class="btn-circle btn-circle-play">
+      <div className="feed-info">
+        <div className="feed-brand">Favela</div>
+        <div className="feed-product">Retro Jersey</div>
+        <div className="feed-studio">Exclamation Studios</div>
+        <div className="feed-actions">
+          <div className="btn-circle">+</div>
+          <div className="btn-circle btn-circle-play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="feed-item">
-      <div class="feed-thumb ft-icons"></div>
-      <div class="feed-info">
-        <div class="feed-brand">Icons</div>
-        <div class="feed-product">Retro Jersey</div>
-        <div class="feed-studio">Exclamation Studios</div>
-        <div class="feed-actions">
-          <div class="btn-circle">+</div>
-          <div class="btn-circle btn-circle-play">
+    <div className="feed-item">
+      <div className="feed-thumb ft-icons"></div>
+      <div className="feed-info">
+        <div className="feed-brand">Icons</div>
+        <div className="feed-product">Retro Jersey</div>
+        <div className="feed-studio">Exclamation Studios</div>
+        <div className="feed-actions">
+          <div className="btn-circle">+</div>
+          <div className="btn-circle btn-circle-play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="time-label">This Month</div>
+    <div className="time-label">This Month</div>
 
-    <div class="feed-item">
-      <div class="feed-thumb ft-coci">
-        <span class="feed-thumb-text">COCI</span>
+    <div className="feed-item">
+      <div className="feed-thumb ft-coci">
+        <span className="feed-thumb-text">COCI</span>
       </div>
-      <div class="feed-info">
-        <div class="feed-brand">Coci</div>
-        <div class="feed-product">Lagos Sweatshirt</div>
-        <div class="feed-studio">Exclamation Studios</div>
-        <div class="feed-actions">
-          <div class="btn-circle">+</div>
-          <div class="btn-circle btn-circle-play">
+      <div className="feed-info">
+        <div className="feed-brand">Coci</div>
+        <div className="feed-product">Lagos Sweatshirt</div>
+        <div className="feed-studio">Exclamation Studios</div>
+        <div className="feed-actions">
+          <div className="btn-circle">+</div>
+          <div className="btn-circle btn-circle-play">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
@@ -858,72 +863,72 @@ footer {
   </div>
 </section>
 
-<!-- BRAND GRID -->
-<section class="brand-section">
-  <div class="section-header" style="margin-bottom:32px;">
-    <div class="section-header-left">
-      <div class="section-eyebrow">The Brands</div>
-      <div class="section-title">On MAGINARI</div>
+{/*  BRAND GRID  */}
+<section className="brand-section">
+  <div className="section-header" data-style="margin-bottom:32px;">
+    <div className="section-header-left">
+      <div className="section-eyebrow">The Brands</div>
+      <div className="section-title">On MAGINARI</div>
     </div>
-    <a class="section-link">All brands</a>
+    <a className="section-link">All brands</a>
   </div>
 
-  <div class="brand-grid">
+  <div className="brand-grid">
 
-    <div class="brand-card">
-      <div class="brand-card-img bc-favela">
-        <div class="brand-card-studio-badge">Exclamation Studios</div>
-        <span class="brand-card-img-label">FAVELA</span>
+    <div className="brand-card">
+      <div className="brand-card-img bc-favela">
+        <div className="brand-card-studio-badge">Exclamation Studios</div>
+        <span className="brand-card-img-label">FAVELA</span>
       </div>
-      <div class="brand-card-body">
-        <div class="brand-card-name">FAVELA</div>
-        <div class="brand-card-origin">Rio de Janeiro, Brazil</div>
+      <div className="brand-card-body">
+        <div className="brand-card-name">FAVELA</div>
+        <div className="brand-card-origin">Rio de Janeiro, Brazil</div>
       </div>
     </div>
 
-    <div class="brand-card">
-      <div class="brand-card-img bc-coci">
-        <div class="brand-card-studio-badge">Exclamation Studios</div>
-        <span class="brand-card-img-label">COCI</span>
+    <div className="brand-card">
+      <div className="brand-card-img bc-coci">
+        <div className="brand-card-studio-badge">Exclamation Studios</div>
+        <span className="brand-card-img-label">COCI</span>
       </div>
-      <div class="brand-card-body">
-        <div class="brand-card-name">COCI</div>
-        <div class="brand-card-origin">Lagos, Nigeria</div>
+      <div className="brand-card-body">
+        <div className="brand-card-name">COCI</div>
+        <div className="brand-card-origin">Lagos, Nigeria</div>
       </div>
     </div>
 
-    <div class="brand-card">
-      <div class="brand-card-img bc-empty">
-        <span class="brand-card-img-label" style="opacity:0.4;">—</span>
+    <div className="brand-card">
+      <div className="brand-card-img bc-empty">
+        <span className="brand-card-img-label" data-style="opacity:0.4;">—</span>
       </div>
-      <div class="brand-card-body" style="opacity:0.4;">
-        <div class="brand-card-name">COMING</div>
-        <div class="brand-card-origin">Unrevealed</div>
+      <div className="brand-card-body" data-style="opacity:0.4;">
+        <div className="brand-card-name">COMING</div>
+        <div className="brand-card-origin">Unrevealed</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- MANIFESTO BAR -->
-<div class="manifesto-bar">
-  <div class="manifesto-text">
-    CULTURE WORN.<br>
-    <em>STORY FIRST.</em><br>
+{/*  MANIFESTO BAR  */}
+<div className="manifesto-bar">
+  <div className="manifesto-text">
+    CULTURE WORN.<br />
+    <em>STORY FIRST.</em><br />
     WORLD AFTER.
   </div>
-  <div class="manifesto-sub">MAGINARI — A Cultural Discovery Platform by Exclamation Studios</div>
+  <div className="manifesto-sub">MAGINARI — A Cultural Discovery Platform by Exclamation Studios</div>
 </div>
 
-<!-- FOOTER -->
+{/*  FOOTER  */}
 <footer>
   <div>
-    <div class="footer-logo">MAGINARI.</div>
-    <div class="footer-sub">Exclamation Studios © 2025</div>
+    <div className="footer-logo">MAGINARI.</div>
+    <div className="footer-sub">Exclamation Studios © 2025</div>
   </div>
-  <div class="footer-right">
-    Culture Envisioned.<br>
-    <span style="color:var(--text-ghost);">All rights reserved.</span>
+  <div className="footer-right">
+    Culture Envisioned.<br />
+    <span data-style="color:var(--text-ghost);">All rights reserved.</span>
   </div>
 </footer>
 
@@ -943,3 +948,7 @@ footer {
 
 </body>
 </html>
+
+    </>
+  );
+}
