@@ -78,7 +78,8 @@ const defaultProfile: UserProfile = {
 };
 
 export default function App() {
-  if (true) return <div className="w-screen h-screen bg-white" />;
+  return <div className="w-screen h-screen bg-white" />;
+
   // Navigation View Tab: 'home' | 'shop' | 'journal' | 'admin' | 'vendor-form'
   const [activeView, setActiveView] = useState<'home' | 'shop' | 'journal' | 'admin' | 'vendor-form'>('home');
 
